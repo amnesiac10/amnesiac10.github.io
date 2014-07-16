@@ -4,3 +4,5 @@ AutoHotkey 特点介绍、编写经验及使用心得等。<br /><br />如果喜
 * 图片和下载的文件分别放在 `assets` 目录的 `images` 和 `downloads` 中
 * 引用文件时使用站点根目录的绝对路径，如 `![有帮助的截图]({{ site.url }}/assets/screenshot.jpg)`
 * 调整每篇文章下方的”上一篇“和”下一篇“到右边对齐
+* 能否使用 page.id 代替 page.thread？
+* 使用分页器变量重新设置文章底部的页面导航
