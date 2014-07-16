@@ -1,3 +1,4 @@
+# 站点配置
 pygments: true
 markdown: redcarpet
 redcarpet:
@@ -7,13 +8,9 @@ redcarpet:
     - autolink
     - strikethrough
     - fenced_code_blocks
+safe: true
 
-url: http://amnesiac10.github.io
-
-# markdown: rdiscount
-permalink: /:title/
-name: AutoHotkey 之美
-author: amnesiac
+# 个人信息
 qq: 
 email: rhong.fu@gmail.com
 duoshuo: amnesiac10
@@ -21,6 +18,12 @@ beian:
 cnzz: 
 weibo: 1861687067
 github: amnesiac10
-safe: true
+
+# 站点信息设置
+url: http://amnesiac10.github.io
+permalink: /:title/
+author: amnesiac
 paginate: 15
+project: amnesiac10.github.io
+name: AutoHotkey 之美
 about: "AutoHotkey 特点介绍、编写经验及使用心得等。 如果您有好文章，欢迎分享。<br /><br />如果喜欢，请分享到微博、微信等。"
