@@ -1,6 +1,6 @@
 # 站点配置
 pygments: true
-markdown: redcarpet
+markdown: rdiscount
 redcarpet:
   extensions:
     - hard_wrap
@@ -21,7 +21,7 @@ github: amnesiac10
 
 # 站点信息设置
 url: http://amnesiac10.github.io
-permalink: /:year/:month/:day/:title.html
+permalink: date
 author: amnesiac
 paginate: 15
 project: amnesiac10.github.io
