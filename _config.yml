@@ -1,6 +1,6 @@
 # 站点配置
 pygments: true
-markdown: rdiscount
+markdown: redcarpet
 redcarpet:
   extensions:
     - hard_wrap
