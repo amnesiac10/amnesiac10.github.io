@@ -21,7 +21,7 @@ github: amnesiac10
 
 # 站点信息设置
 url: http://amnesiac10.github.io
-permalink: date
+permalink: /:year/:month/:day/:title.html
 author: amnesiac
 paginate: 15
 project: amnesiac10.github.io
