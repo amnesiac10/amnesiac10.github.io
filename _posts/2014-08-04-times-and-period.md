@@ -17,7 +17,7 @@ tags:
 
 在这个示例中（来自[帮助](http://ahkcn.sourceforge.net/docs/)并做适当修改），使用了两个判断条件：
 
-```ahk
+```AutoHotkey
 intInterval := 500 ; 若两次连击在这个时间间隔中，则视为双击。
 ~RControl::
 if (A_PriorHotkey <> "~RControl" or A_TimeSincePriorHotkey > intInterval)
@@ -38,7 +38,7 @@ return
 
 既然双击可行，那么三击或更多呢？在实际中不常用，不过思考还是挺有趣的。下面是多次连击的实用例子，设计的很精巧：
 
-```ahk
+```AutoHotkey
 CapsLock::
 if (A_ThisHotkey <> A_PriorHotkey)
     return
@@ -61,7 +61,7 @@ Return
 
 注意到了吗？其中计时器的周期是负的。此外，这里直接屏蔽了系统原来的功能，参照前面双击的例子可以很容易恢复。再看帮助中一个例子（做了修改）：
 
-```ahk
+```AutoHotkey
 #c::
 if (intCount > 0) ; SetTimer 已经启动，这里记录键击。
 {
