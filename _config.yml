@@ -1,6 +1,6 @@
 # 站点配置
 pygments: true
-# 这里设置 redcarpet 作为 md 引擎为什么不会重新生成文章？即无效，这样就无法使用 fenced_code_blocks 语法来高亮代码了。
+# 这里设置 redcarpet 作为 md 引擎为什么不会重新生成文章？即无效，这样就无法使用 fenced_code_blocks 语法来高亮代码了。但为什么 rdiscount 又能识别 `````` 中为代码却不能高亮呢？
 markdown: rdiscount
 redcarpet:
   extensions:
