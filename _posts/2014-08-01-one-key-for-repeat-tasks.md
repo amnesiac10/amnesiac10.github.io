@@ -56,10 +56,10 @@ AutoHotkey 的帮助文件，写得很细。有耐心的就认真拜读，想成
 
 如下图，打开你的文本编辑器（记事本、或 gVIM），新建一个文件，把下两行内容复制进去。
 
-```ahk
+{% highlight ahk linenos %}
 msgbox, 这是我的第一个 AutoHotkey 脚本 `n 我既关注效率，也尊重版权
 run, http://xbeta.info/autohotkey-guide.htm
-```
+{% endhighlight %}
 
 先任意保存到一个地方（比如桌面），文件名任意（比如 new.ahk）
 ![2014-07-05 203920.png](http://upload-images.jianshu.io/upload_images/19661-054de4c5aa8a6d60.png)
@@ -86,9 +86,9 @@ run, http://xbeta.info/autohotkey-guide.htm
 
 将下面的语句保存为 new2.ahk （提醒 UTF-8 with BOM 编码）：
 
-```ahk
+{% highlight ahk linenos %}
 ::test1:: 善用佳软。ひらがな 平仮名；カタカナ 片仮名。Korean/한국어/조선말。
-```
+{% endhighlight %}
 
 运行后，在任何能正常显示 unicode 字符的程序中（比如浏览器的地址栏、MS Word），键入 test1 后，再加空格、或 tab、或回车，就可以触发缩写，“善用佳软……”内容就上屏了。
 
@@ -100,27 +100,27 @@ run, http://xbeta.info/autohotkey-guide.htm
 
 将下面的语句保存为 new3.ahk （提醒 UTF-8 编码）：
 
-```ahk
+{% highlight ahk linenos %}
 #1::
 run, http://mail.163.com
 WinWaitActive, 网易 ; 等待网页加载成功（至少标题显示出来）
 sleep, 1000 ; 保险起见，再等1秒（视网速而定）
 send, user-id{tab}password{enter} ; 模拟键入用户名、密码、回车
 return
-```
+{% endhighlight %}
 
 运行脚本……但没有反应？没错，这是因为脚本中为相应命令定义了热键。#1 表示 Win+1 键。
 按下 Win+1 键，脚本会自动打开 163 信箱、输入用户名、密码，完成登录。
 
 注意：本例实际执行中有可能不成功。因为邮箱登录页面可能已经保存了用户名，甚至也保存了密码，导致初始输入焦点不准确。笔者真实在用的例子是登录 Lotus Notes 客户端，并输入密码。代码如下：
 
-```ahk
+{% highlight ahk linenos %}
 #n::
 run, "c:\Program Files\lotus\notes\nlnotes.exe"
 winwait,,输入口令
 sendinput, mypassword{enter}
 return
-```
+{% endhighlight %}
 
 ## 后记
 

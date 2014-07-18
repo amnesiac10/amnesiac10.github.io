@@ -17,7 +17,7 @@ tags:
 
 在这个示例中（来自[帮助](http://ahkcn.sourceforge.net/docs/)并做适当修改），使用了两个判断条件：
 
-```ahk
+{% highlight ahk linenos %}
 intInterval := 500 ; 若两次连击在这个时间间隔中，则视为双击。
 ~RControl::
 if (A_PriorHotkey <> "~RControl" or A_TimeSincePriorHotkey > intInterval)
@@ -27,7 +27,7 @@ if (A_PriorHotkey <> "~RControl" or A_TimeSincePriorHotkey > intInterval)
 }
 MsgBox, 您双击了右边的 Ctrl 键。
 return
-```
+{% endhighlight %}
 
 在第一次按下右 Ctrl 键时，会被判断为不是双击，所以什么也没做。第二次则会显示提示框。在实际建立双击热键时，经常需要考虑两点：
 
@@ -38,7 +38,7 @@ return
 
 既然双击可行，那么三击或更多呢？在实际中不常用，不过思考还是挺有趣的。下面是多次连击的实用例子，设计的很精巧：
 
-```ahk
+{% highlight ahk linenos %}
 CapsLock::
 if (A_ThisHotkey <> A_PriorHotkey)
     return
@@ -57,11 +57,11 @@ else if (intCount = 3)
 
 intCount := "" ; 重置记数器。
 Return
-```
+{% endhighlight %}
 
 注意到了吗？其中计时器的周期是负的。此外，这里直接屏蔽了系统原来的功能，参照前面双击的例子可以很容易恢复。再看帮助中一个例子（做了修改）：
 
-```ahk
+{% highlight ahk linenos %}
 #c::
 if (intCount > 0) ; SetTimer 已经启动，这里记录键击。
 {
@@ -89,13 +89,13 @@ else if (intCount > 2)
 }
 intCount = 0
 return
-```
+{% endhighlight %}
 
 和前一个完全一样吗？如果不去执行，可能不容易明白这两者的运行机制区别在哪里，这里给点提示：它们的计时方式不相同。比较而言，前一个较为符合我们对多击的理解，可能实用一些。
 
 前两个例子尽管看起来长一些，实际上很好理解，但下面这个虽短却需好好思考及实践才会有点头绪：
 
-```ahk
+{% highlight ahk linenos %}
 #MaxThreadsPerHotkey 5
 #Space::  ; Win+Space 热键.
 #MaxThreadsPerHotkey 1
@@ -110,7 +110,7 @@ else if (intCount = 3)
 
 intCount := "" ; 重置记数器。
 Return
-```
+{% endhighlight %}
 
 看不懂也没关系，用起来效果和第一个类似（使用指令时必须注意是全局还是局部的）。
 
@@ -120,7 +120,7 @@ Return
 
 根据按住按键的时长执行不同的操作，可能实际中比上一种用法更少见。
 
-```ahk
+{% highlight ahk linenos %}
 Esc:: ; 在按下时触发。
 If StartTime
     return
@@ -139,20 +139,20 @@ else if (TimeLength < 1500 and TimeLength >= 200) ; 后一条件实际是多余�
 }
 StartTime := ""
 return
-```
+{% endhighlight %}
 
 代码中已经自行解释了，这里补充一点是触发的时间点，在写普通热键时经常需要考虑到这点（主要是修饰键和普通键的具体表现的区别）。另外，Esc:: 热键写成这样为什么不行呢？
 
-```ahk
+{% highlight ahk linenos %}
 Esc::StartTime := A_TickCount
-```
+{% endhighlight %}
 
 请看下面两图，可以看出长按一个按键时我们可能认为只会发送一次按下事件，但实际上它会发送连续的按下事件，且这些事件都触发了 Esc:: 热键：
 ![2014-07-01 105102.png](http://upload-images.jianshu.io/upload_images/19661-98ef0ae659f7cbbb.png)
 ![2014-07-01 105116.png](http://upload-images.jianshu.io/upload_images/19661-f4ff31991f6bd846.png)
 因此，编写一个脚本时如果运行结果和预期不一致，调试是找出问题很好的方法。在实际中，有时可能用 [Hotkey 命令](http://ahkcn.sourceforge.net/docs/commands/Hotkey.htm)效果较好：
 
-```ahk
+{% highlight ahk linenos %}
 Esc:: ; 在按下时触发。
 If StartTime
     return
@@ -173,7 +173,7 @@ else if (TimeLength >= 200 and TimeLength < 1500)
 }
 StartTime := ""
 return
-```
+{% endhighlight %}
 
 
 

@@ -46,7 +46,7 @@ registerSWFObject( swfo, "p2pprivacy" );
 
 
 
-```ahk
+{% highlight ahk linenos %}
 if not A_IsAdmin
 {
   Run *RunAs "%A_ScriptFullPath%"  ; 需要 v1.0.92.01+
@@ -91,20 +91,20 @@ IfMsgBox, Yes
   MsgBox, 4160, 恭喜, 视频网站提速成功！`r`n`r`n如果浏览器用的是“搜狗”，需要勾选“设置”——“页面设置”——“使用系统公用的 Flash Player (需重启浏览器)”, 10
 }
 ExitApp
-```
+{% endhighlight %}
 
 脚本很直白，无需再解释了。有重复代码，对新人而言先理解较重要。
 
 ## 评论中[芍青的脚本](http://zhuanlan.zhihu.com/autohotkey/19794762#comment-57490745)
 经过简单的风格整理：
 
-```ahk
+{% highlight ahk linenos %}
 f := {SilentAutoUpdateEnable:0, AutoUpdateDisable:0, ProtectedMode:0, RTMFPP2PDisable:1}
 B := FileRead(L := "C:\Windows\" (A_Is64bitOS ? "SysWOW64" : "system32") "\Macromed\Flash\mms.cfg")
 Loop, parse, B, `n, `t `r
   A .= ((f[P := SubStr(A_LoopField, 1, InStr(A_LoopField, "=") -1)] = "") ? A_LoopField : P"="f[P] ) "`n"
 FileAppend(Trim(A, " `n"), L, 1, "")
-```
+{% endhighlight %}
 
 思路清晰、代码紧凑，使用了内嵌赋值和对象，新手看起来可能不太直观。此外，注意其中另外设置的几个参数是其他用途的。
 没有设置 %windir%\system32\mms.cfg 文件（只设置了一个文件），且后面用 FileAppend 而没有删除原来的内容
@@ -113,7 +113,7 @@ FileAppend(Trim(A, " `n"), L, 1, "")
 
 ## amnesiac 的改进脚本
 
-```ahk
+{% highlight ahk linenos %}
 ; Flash 配置文件的列表，集中在一起方便扩展。如果使用其他内置 Flash 的浏览器，请将其包含的 mms.cfg 文件（含路径）追加到这个变量中
 MMSFileList =
 (
@@ -148,7 +148,7 @@ DisableP2P(mmscfg)
     FileAppend, %content%, %mmscfg%, CP936
   }
 }
-```
+{% endhighlight %}
 
 扩展性较好，便于自己或他人后续维护。
 

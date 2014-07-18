@@ -49,7 +49,7 @@ tags:
 ## 我的实现脚本
 实现的是否方便往往与对工具的熟悉程度有直接关系（当然对问题的理解也很关键），我个人观点是一般的脚本能用就行，如果没有特殊情况或兴趣却花费大量时间去优化很可能得不偿失。看看具体的脚本：
 
-```ahk
+{% highlight ahk linenos %}
 Str = 
 (
 d:\1\E736B0D95D3C7D0D6D4EA4BF466F22D03yhiahzU~ahzU79~04~166-210.pdf
@@ -64,19 +64,19 @@ StringReplace, Str, Str, ~, ~~\, All
 Sort, Str, N \
 StringReplace, Str, Str, ~~\, ~, All
 MsgBox, % Str
-```
+{% endhighlight %}
 
 仔细观察后发现，目标字符串中要比较的那部分子字符串都为数值，且该子字符串前的字符序列比较固定，都为 `~`（更长一些则为 `~ahzU79~04~`），这样就具备了使用 Sort 中 \ 的条件，因此代码出来了：
 
-```ahk
+{% highlight ahk linenos %}
 Sort, Str, N \
-```
+{% endhighlight %}
 
 在比较之前先替换就行了，不再赘述。有趣的是，当我在 Vim 中写出上面的代码时，我又发现一个更简便的方法：
 
-```ahk
+{% highlight ahk linenos %}
 Sort, Str, N P57
-```
+{% endhighlight %}
 
 从第 57 个字符开始比较，显然这种方法得益于观察，因为我 Vim 中用等宽字型，一眼就能看出待比较子字符串的起始位置相同（在上面代码块中也能看出来，但最初在论坛看到问题时我没发现）。显然，这里打破了我之前**无法直接使用 Sort** 的想法。
 

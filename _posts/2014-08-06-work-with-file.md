@@ -26,25 +26,25 @@ AutoHotkey 中主要为操作文件提供了下列命令（和函数）：
 
 首先设置需要操作的目标文件：
 
-```ahk
+{% highlight ahk linenos %}
 strFileName := "C:\Test.txt"
-```
+{% endhighlight %}
 
 ### FileAppend
 
 附加一些内容到文件末尾，当目标文件不存在时会首先创建文件：
 
-```ahk
+{% highlight ahk linenos %}
 FileAppend, 需要追加的文本。`n, %strFileName%
-```
+{% endhighlight %}
 
 ### FileDelete
 
 删除文件。例如：
 
-```ahk
+{% highlight ahk linenos %}
 FileDelete, %strFileName%
-```
+{% endhighlight %}
 
 如果需要覆盖文件，则需要首先使用 FileDelete 删除文件（传统方式中没有直接覆盖的命令）。
 
@@ -52,16 +52,16 @@ FileDelete, %strFileName%
 
 使用 FileRead 可以一次性读取整个文件的内容：
 
-```ahk
+{% highlight ahk linenos %}
 FileRead, strFile, %strFileName%
-```
+{% endhighlight %}
 
 如果只需要读取文件的少数几行，请使用 FileReadLine：
 
-```ahk
+{% highlight ahk linenos %}
 intLineNum := 1 ; 设置需要读取的行号。
 FileReadLine, strRow, %strFileName%, %intLineNum%
-```
+{% endhighlight %}
 
 如果需要逐行处理文件内容，则使用循环比较方便（比 FileReadLine 效果更好）：
 
@@ -79,22 +79,22 @@ Loop, Read, %strFileName%, %strObjectFileName%
 
 判断文件、文件夹是否存在。例如：
 
-```ahk
+{% highlight ahk linenos %}
 if FileExist(strFileName)
   MsgBox, 目标存在。
-```
+{% endhighlight %}
 
 ### 文件和文件夹循环
 
 使用 Loop 循环遍历文件系统中指定位置的文件和文件夹（与上面读取文件内容不同）：
 
-```ahk
+{% highlight ahk linenos %}
 strObjectDir := "C:\"
 Loop, %strObjectDir% ; 仅获取文件。
 {
   MsgBox, 在 %strObjectDir% 中第 %A_Index% 个文件的名称为 %A_LoopFileName%。
 }
-```
+{% endhighlight %}
 
 注意：这个 Loop 循环中存在许多自己特有的变量，许多时候很有用。
 
@@ -118,12 +118,12 @@ Loop, %strObjectDir% ; 仅获取文件。
 
 使用 FileOpen() 函数：
 
-```ahk
+{% highlight ahk linenos %}
 strFileName := "C:\Test.txt"
 objFile := FileOpen(strFileName, "r", "UTF-8")
 if ObjFile
   MsgBox, 文件 %strFileName% 打开成功。
-```
+{% endhighlight %}
 
 在创建对象后，必须立即判断是否创建成功，初学者容易忽略这点。
 

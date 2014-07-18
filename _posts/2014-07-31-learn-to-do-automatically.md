@@ -149,11 +149,11 @@ WinWait 的作用是在目标窗口出现之前不再执行后面的所有语句
 【示例 3.1.1 】
 AHK：
 
-```ahk
+{% highlight ahk linenos %}
 Run Notepad
 WinWait, 无标题 - 记事本
 MsgBox 记事本窗口已被打开！
-```
+{% endhighlight %}
 
 AU3：
 
@@ -179,7 +179,7 @@ AU3：`WinClose/WinKill ( "窗口标题" [, "窗口文本"] )`
 【示例 3.1.2 】
 AHK：
 
-```ahk
+{% highlight ahk linenos %}
 Run, Sysdm.cpl
 WinWait, 系统属性
 WinActivate, 系统属性
@@ -187,7 +187,7 @@ WinWaitActive, 系统属性
 Sleep, 3000
 WinClose, 系统属性
 WinWaitClose, 系统属性
-```
+{% endhighlight %}
 
 AU3：
 
@@ -217,11 +217,11 @@ AU3：`WinGetHandle ( "窗口标题" [, "窗口文本"] )`
 【示例 3.1.3 】
 AHK：
 
-```ahk
+{% highlight ahk linenos %}
 Run, NotePad, , , ThisPID
 WinWait, ahk_pid %ThisPID% ;这里的ahk_pid表明跟在后面的变量是进程ID
 WinGet, ThisID, ID, ahk_pid %ThisPID% ;ThisID将保存获得的窗口句柄
-```
+{% endhighlight %}
 
 AU3：
 
@@ -236,7 +236,7 @@ $handle = WinGetHandle("classname=Notepad")
 【示例 3.1.4 】
 AHK：
 
-```ahk
+{% highlight ahk linenos %}
 Run, Notepad, , , ThisPID ;先获得运行的记事本程序的进程ID
 WinWait, 无标题 - 记事本 ahk_pid %ThisPID% ;等待该进程窗口的出现
 WinGet, ThisHWND, ID, 无标题 - 记事本 ahk_pid %ThisPID% ;获得窗口句柄
@@ -245,7 +245,7 @@ WinWaitActive, ahk_id %ThisHWND%
 Sleep, 3000
 WinClose, ahk_id %ThisHWND%
 WinWaitClose, ahk_id %ThisHWND%
-```
+{% endhighlight %}
 
 ## 模拟键击和鼠标点击
 ### 模拟鼠标点击（按钮等）控件
@@ -271,10 +271,10 @@ AutoIt Window Info 使用演示截图：
 【示例4.1.1】
 AHK：
 
-```ahk
+{% highlight ahk linenos %}
 ControlClick, 确定, 系统属性
 ControlClick, Button2, 系统属性
-```
+{% endhighlight %}
 
 AU3：
 
@@ -292,11 +292,11 @@ Send 是最直接的方法，就是模拟用户按键行为，直接发送键击
 最简单的应用――按回车：
 AHK：
 
-```ahk
+{% highlight ahk linenos %}
 Run, Control Sysdm.cpl
 WinWait, 系统属性
 Send, {Enter}
-```
+{% endhighlight %}
 
 AU3：
 
@@ -309,13 +309,13 @@ Send("{Enter}")
 常见的组合键――Alt+X / Ctrl+N 等等，在安装软件的时候经常会有提供一个按钮“下一步(N)”，表示按下 Alt+N 即可触发等同于点击该按钮的效果，其它的可触类旁通。以打开记事本窗口的“​文件”菜单为例：
 AHK：
 
-```ahk
+{% highlight ahk linenos %}
 Run, Notepad
 WinWait, 无标题 - 记事本
 WinActivate, 无标题 - 记事本
 WinWaitActive, 无标题 - 记事本
 Send, !f
-```
+{% endhighlight %}
 
 AU3：
 
@@ -357,11 +357,11 @@ AU3：`ControlCommand ( "窗口标题", "窗口文本", 控件ID, "命令", "选
 【示例5.1.2】
 AHK：
 
-```ahk
+{% highlight ahk linenos %}
 Control, Check, , Button5, foobar
 Control, UnCheck, , Button7, foobar
 Control, Check, , Button14, foobar
-```
+{% endhighlight %}
 
 AU3：
 
@@ -381,10 +381,10 @@ ControlCommand("foobar", "", "Button14", "Check", "")
 【示例5.1.3】
 AHK：
 
-```ahk
+{% highlight ahk linenos %}
 Control, Choose, 5, ComboBox1, Installer
 Control, ChooseString, 简体中文, ComboBox1, Installer
-```
+{% endhighlight %}
 
 AU3：
 
