@@ -65,13 +65,13 @@ FileReadLine, strRow, %strFileName%, %intLineNum%
 
 如果需要逐行处理文件内容，则使用循环比较方便（比 FileReadLine 效果更好）：
 
-```ahk
+{% highlight autohotkey %}
 strObjectFileName := "C:\Object.txt" ; 设置用来存放处理后的数据的目标文件。
 Loop, Read, %strFileName%, %strObjectFileName%
 {
   MsgBox, 第 %A_Index% 行的内容为 %A_LoopReadLine%。
 }
-```
+{% endhighlight %}
 
 注意：只有在文件读取循环中才存在 A_LoopReadLine 变量。此外，在这种循环中需要写入文本时建议使用仅带一个参数（写入的文本）的 FileAppend 命令，这样执行地更高效。
 
