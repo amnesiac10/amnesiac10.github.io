@@ -144,7 +144,7 @@ if ObjFile
 
 ### 文件对象用法模板
 
-```ahk
+{% highlight ahk linenos %}
 FileName := "d:\test.txt"
 ObjFile := FileOpen(FileName, "r")
 if !IsObject(ObjFile) ; 另一种判断文件对象是否创建成功的方法。
@@ -161,7 +161,7 @@ Loop ; 此处可能 While 循环较好，后续文章中我会比较几种循环
   MsgBox, 第 %A_Index% 行文本为: %Text%
 }
 ObjFile.Close() ; 结束操作后必须关闭对象，以释放资源。
-```
+{% endhighlight %}
 
 这个文件对象的使用模板，就像武术中的套路，在需要时适当调整一下很方便用到自己的脚本中。
 
