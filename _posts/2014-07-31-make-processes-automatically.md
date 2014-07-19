@@ -263,9 +263,9 @@ Q：如何使用这两个工具？
 A：先打开你要进行操作的目标窗口，然后运行 Window Spy 或 AutoIt Window Info，接下来就是把鼠标移到目标控件上（比如某个按钮）：
 
 Window Spy 使用演示截图：
-![2014-07-05 210804.png](/assets/images/19661-c2b1e31b44145f7d.png)
+![2014-07-05 210804.png]({{ site.url }}/assets/images/19661-c2b1e31b44145f7d.png)
 AutoIt Window Info 使用演示截图：
-![2014-07-06 061224.png](/assets/images/19661-602dab3da12acff2.png)
+![2014-07-06 061224.png]({{ site.url }}/assets/images/19661-602dab3da12acff2.png)
 
 现在我们假设已打开并激活了“系统属性”窗口，而任务是点击它的“确定”按钮，则可用以下几种方法：
 【示例4.1.1】
@@ -331,7 +331,7 @@ Send("!f")
 然而，在真正实现自动化时仅靠上面的技术往往难以达到预期目的。下面开始进入最为重要的控件操作。
 ### 设置文本
 在安装软件的过程中用户往往需要提供一些必需信息，比如安装目录。很多用户并不喜欢把软件安装到默认的 C 盘而更愿意把它们安装到别的地方，那么脚本究竟提供了什么方法能让​我们修改如下图所示的路径呢？
-![2014-07-02 174402.png](/assets/images/19661-e349bc97f65baf18.png)
+![2014-07-02 174402.png]({{ site.url }}/assets/images/19661-e349bc97f65baf18.png)
 我们先用上文中提到的 Window Spy 或 AutoIt Window Info 来获得这个路径的编辑框的信息，假设这个窗口的标题为 Setup foobar，该路径编辑框的类名是 Edit1，而我们需要把它改成“D:\foobar2000”，接下来就可以使用下列命令/函数来设置它的文本了：
 AHK：`ControlSetText [, 目标控件, 新文本, 窗口标题, 窗口文本, 排除标题, 排除文本]`
 AU3：`ControlSetText ( "窗口标题", "窗口文本", 控件ID, "新文本")`
@@ -343,7 +343,7 @@ AU3：`ControlSetText("Setup foobar", "", "Edit1", "D:\foobar2000")`
 
 ### 选中和取消选中单选框和复选框项目
 有时程序为了满足用户的个性化设置而需要用户提供更多的信息，我们经常会遇到这样的情况：
-![2014-07-02 194152.png](/assets/images/19661-1b7e95d3afe9e54a.png)
+![2014-07-02 194152.png]({{ site.url }}/assets/images/19661-1b7e95d3afe9e54a.png)
 如何保证选中所需项目并取消某些项目呢？
 下面先来介绍 AHK 和 AU3 中用来对控件进行各种属性设置的命令/函数：
 AHK：`Control [, 命令, 值, 目标控件, 窗口标题, 窗口文本, 排除标题, 排除文本]`
@@ -373,7 +373,7 @@ ControlCommand("foobar", "", "Button14", "Check", "")
 
 ### 选择下拉列表的项目
 相信你肯定遇到过下面这种情况：
-![2014-07-02 174414.png](/assets/images/19661-1577c38144700e20.png)
+![2014-07-02 174414.png]({{ site.url }}/assets/images/19661-1577c38144700e20.png)
 问题又来了：如何选中自己需要的项目？
 答案仍是使用上面提到的命令/函数。对这种控件而言，AHK 适用的命令是“Choose, N”和“ChooseString, String”，分别表示选中第 N 个项目和选中与字符串 String 匹配的项目；而 AU3 适用的命令则是“SetCurrentSelection, N”和“SelectString, String”，分别表示选中第 N+1（注意是从零开始表示！）个项目和选中与字符串 String 匹配的项目。
 

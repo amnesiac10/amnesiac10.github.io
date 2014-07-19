@@ -78,7 +78,7 @@ return
 ## 原理
 
 每一次按键，在系统中包含了两次的按键事件：
-![key history.png](/assets/images/19661-1205c08560f2505a.png)
+![key history.png]({{ site.url }}/assets/images/19661-1205c08560f2505a.png)
 红色背景区域的内容表示我按了一次 h 键：先按下，后松开。为了方便，暂且表示为 `{h down}`、`{h up}`。这说明什么？
 
 在组合键 a & k:: 中，可以表示为：`{a down}{k down}{k up}{a up}`

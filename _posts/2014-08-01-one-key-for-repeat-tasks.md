@@ -8,7 +8,7 @@ tags:
 ---
 转者按：本文属于**零基础入门**专题教程，原[发表于新浪博客](http://blog.sina.com.cn/s/blog_46dac66f01011ar7.html)，后[被转载自太平洋电脑网](http://arch.pconline.com.cn//pcedu/soft/gj/others/0609/872613.html)，目前[更新于善用佳软](http://xbeta.info/autohotkey-guide.htm)，作者 xbeta。（另：我曾[转载到中文论坛](http://ahk8.com/thread-3113-post-17838.html)。）本专题选取一些通俗易懂的基础入门教程，经适当整理（以反映目前 AutoHotkey 现状）后集中发表，以方便初次接触脚本的朋友入门（帮助中的[初学者向导](http://ahkcn.github.io/docs/Tutorial.htm)也是很好的入门教程）。
 
-![AutoHotkey_logo_no_text.gif](/assets/images/19661-2f2deb669bf1cc40.gif)
+![AutoHotkey_logo_no_text.gif]({{ site.url }}/assets/images/19661-2f2deb669bf1cc40.gif)
 AutoHotkey 是一个神奇的工具。为了便于新人上手，xbeta 写了此篇最最傻瓜的 0 级入门教程。
 
 ## 何为 AutoHotkey
@@ -33,7 +33,7 @@ AutoHotkey 是一个小工具软件，可以简化你的重复性工作。
 安装：按提示操作即可。我习惯上装在 d:\program files\AutoHotkey
 
 安装界面中，可选择典型安装、自定义安装或绿色提取：
-![2014-07-07 162219.png](/assets/images/19661-b924b015d433cb89.png)
+![2014-07-07 162219.png]({{ site.url }}/assets/images/19661-b924b015d433cb89.png)
 
 * 典型安装（Express Installation）：将安装默认版本到默认位置中，没有特殊要求时建议选择
 * 自定义安装（Custom Installation）：将提供更多选项供用户选择
@@ -46,7 +46,7 @@ AutoHotkey 是一个小工具软件，可以简化你的重复性工作。
 3. 其他附加选项（安装脚本编译器、启用脚本的拖放功能），建议选上
 
 点击 `Install` 后才真正开始执行安装过程，完成后提示：
-![2014-07-07 162250.png](/assets/images/19661-29567c5d17115712.png)
+![2014-07-07 162250.png]({{ site.url }}/assets/images/19661-29567c5d17115712.png)
 
 AutoHotkey 的帮助文件，写得很细。有耐心的就认真拜读，想成高手的必须要研读。
 
@@ -62,15 +62,15 @@ run, http://xbeta.info/autohotkey-guide.htm
 {% endhighlight %}
 
 先任意保存到一个地方（比如桌面），文件名任意（比如 new.ahk）
-![2014-07-05 203920.png](/assets/images/19661-054de4c5aa8a6d60.png)
+![2014-07-05 203920.png]({{ site.url }}/assets/images/19661-054de4c5aa8a6d60.png)
 注意：①文件名后辍必须为ahk；②保存格式必须选为 UTF-8 with BOM！（记事本保存为 UTF-8 时会加上 BOM，对于其他编辑器请参阅相关说明。）
-![2014-07-01 152426.png](/assets/images/19661-f903d9ae4365d04e.png)
+![2014-07-01 152426.png]({{ site.url }}/assets/images/19661-f903d9ae4365d04e.png)
 
 ### 运行脚本文件
 
 这时，双击 new.ahk 看到效果了：
 先弹出如下提醒
-![2014-07-01 171951.png](/assets/images/19661-5dc43b50ae73ab6c.png)
+![2014-07-01 171951.png]({{ site.url }}/assets/images/19661-5dc43b50ae73ab6c.png)
 
 你点击“确定”按钮后，就会启动浏览器，打开本文网址（注：此处的本文是指作者博客中的本文地址）。
 
@@ -136,4 +136,4 @@ return
 * 目前最全面的 AutoHotkey 学习资料，由 amnesiac 整理：[AutoHotkey 学习指南](http://xbeta.info/autohotkey-guide-2.htm)
 
 注：xbeta 用 gVIM 编辑 ahk 文件的高亮效果如下：
-![060921_a4.jpg](/assets/images/19661-da3d89cf96eeb290.jpg)
+![060921_a4.jpg]({{ site.url }}/assets/images/19661-da3d89cf96eeb290.jpg)

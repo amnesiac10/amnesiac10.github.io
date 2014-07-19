@@ -148,8 +148,8 @@ Esc::StartTime := A_TickCount
 {% endhighlight %}
 
 请看下面两图，可以看出长按一个按键时我们可能认为只会发送一次按下事件，但实际上它会发送连续的按下事件，且这些事件都触发了 Esc:: 热键：
-![2014-07-01 105102.png](/assets/images/19661-98ef0ae659f7cbbb.png)
-![2014-07-01 105116.png](/assets/images/19661-f4ff31991f6bd846.png)
+![2014-07-01 105102.png]({{ site.url }}/assets/images/19661-98ef0ae659f7cbbb.png)
+![2014-07-01 105116.png]({{ site.url }}/assets/images/19661-f4ff31991f6bd846.png)
 因此，编写一个脚本时如果运行结果和预期不一致，调试是找出问题很好的方法。在实际中，有时可能用 [Hotkey 命令](http://ahkcn.github.io/docs/commands/Hotkey.htm)效果较好：
 
 {% highlight ahk linenos %}
