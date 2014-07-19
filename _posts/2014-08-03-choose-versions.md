@@ -40,9 +40,9 @@ tags:
 
 该分支中因编码和平台类型分成三种构建（build）：
 
-> Unicode 32-bit - recommended for new scripts.
->   Unicode 64-bit - for increased performance on 64-bit systems.
->   ANSI 32-bit - better compatibility with some older scripts. 
+> Unicode 32-bit - recommended for new scripts.  
+>   Unicode 64-bit - for increased performance on 64-bit systems.  
+>   ANSI 32-bit - better compatibility with some older scripts.   
 
 如下载页面的说明所示，大多数用户请选择 Unicode 32-bit，但这个链接的目标文件仅有主程序（即一个 AutoHotkey.exe，适合偏爱绿色版的老用户）。**建议直接下载页面开始处的安装包**（Installer），其中包含了这三种构建和后面的编译器和离线帮助（英文的，中文帮助请在底部链接处下载）**并在安装时选择 Unicode 32-bit** 即可。
 
@@ -76,8 +76,8 @@ ANSI 32-bit 的兼容性主要指运行为 AutoHotkey Basic 编写的脚本而�
 
 * AutoHotkey.dll 最初由 tinku99 开发，已由 HotkeyIt 合并至 AutoHotkey_H，之后新增了简化版本（AutoHotkeyMini.dll）。其他语言通过 DLL 接口或 COM 接口利用该文件可执行 AutoHotkey 代码，而 AutoHotkey_L 也可通过它实现多线程。
 * AutoHotkey.exe（H 分支）是 HotkeyIt 在 AutoHotkey_L（及 AutoHotkey v2）基础上主要增加线程和结构相关函数并增强了 DLL 调用功能的分支，详细的新增功能及细节变化请参阅其帮助。
->* AutoHotkey v1（基于 AutoHotkey_L）可执行文件包含了 ANSI 和 Unicode 32 位版本及 Unicode 64 位版本。
->* AutoHotkey V2（基于 AutoHotkey v2）可执行文件包含了 Unicode 32 和 64 位版本。
+>* AutoHotkey v1（基于 AutoHotkey_L）可执行文件包含了 ANSI 和 Unicode 32 位版本及 Unicode 64 位版本。  
+>* AutoHotkey V2（基于 AutoHotkey v2）可执行文件包含了 Unicode 32 和 64 位版本。  
 
 它实现了多线程、支持动态运行 AutoHotkey 代码、在 #Includes 中使用通配符或动态 #Includes、简化了 DLL 尤其是 Windows API 的调用，适用于已经使用 AutoHotkey 较长时间的有经验用 户。其中的帮助仅说明了在 AutoHotkey_L 外有修改或增强部分的内容，所以需要与 AutoHotkey_L 帮助一起使用。 **AutoHotkey_H 功能上有所增强，不过用户群较小（可能测试不充分）、不易获得支持，同时帮助文件比较粗糙（尽管有译成中文的版本），更新较不稳定。因此，新用户无需考虑。**
 
