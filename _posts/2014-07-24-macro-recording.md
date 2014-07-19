@@ -15,7 +15,7 @@ tags:
 
 ## 曾经的记忆
 
-两三年前的用户可能还记得 AutoHotkey Basic（关于各分支介绍请参阅[选择哪个分支？](http://amnesiac10.github.io/2014/08/02/choose-versions.html)）中自带有录制鼠标和键盘宏的工具——AutoScriptWriter：
+两三年前的用户可能还记得 AutoHotkey Basic（关于各分支介绍请参阅[选择哪个分支？]({{ site.url }}/2014/08/02/choose-versions.html)）中自带有录制鼠标和键盘宏的工具——AutoScriptWriter：
 ![](http://ww2.sinaimg.cn/mw690/6ef7171bgw1eh3gephcbtj20f50av400.jpg)
 从图中可以看出界面非常简单，只有这么几个按钮，功能也十分有限。目前 AutoHotkey_L 已经去除了，可能因缺乏更新而与目前的 AutoHotkey_L 存在兼容问题。长期以来我一直关注论坛上其他录制工具，不过看过的一些都感觉有所欠缺，如在易用性方面仍不够理想或可操作性较差。
 
@@ -51,4 +51,4 @@ Pulover’s Macro Creator 是免费的自动化工具和脚本生成器，它基
 * 预览最终脚本（包括在录制期间）
 * 保存/加载宏或根据自定义选项和热键将其导出为 AHK 脚本
 
-更多功能请参阅帮助文档，[MacroCreator学习资源](http://amnesiac10.github.io/2014/07/22/resource-for-macrocreator.html)将介绍 Pulover's Macro Creator 学习资源。
+更多功能请参阅帮助文档，[MacroCreator学习资源]({{ site.url }}/2014/07/22/resource-for-macrocreator.html)将介绍 Pulover's Macro Creator 学习资源。

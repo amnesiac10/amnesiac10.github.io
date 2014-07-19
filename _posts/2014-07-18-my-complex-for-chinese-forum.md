@@ -12,7 +12,7 @@ tags: 中文论坛
 
 ## 中文论坛历史
 注：这里的中文论坛指中文爱好者聚集的论坛，而非特指名称为 **AutoHotkey 中文论坛**的论坛。
-在 [AutoHotkey 之中国情](http://amnesiac10.github.io/2014/07/18/chinese-complex-of-autohotkey.html)中我曾略有提及，这里简述如下：
+在 [AutoHotkey 之中国情]({{ site.url }}/2014/07/18/chinese-complex-of-autohotkey.html)中我曾略有提及，这里简述如下：
 
 2. 最初使用 ahk.5d6d.com 建立了免费论坛。接着注册 ahkbbs.cn，转向前面的二级域名，并放了在线帮助。之后过期，继续使用 ahk.5d6d.com。
 2. 曾开辟[深度论坛 AutoHotkey 专版](http://soft.deepin.org/thread.php?fid=277)（已失效），后因人气不足关闭。
@@ -52,7 +52,7 @@ tags: 中文论坛
 * autohotkey.com
 
 每个都代表着随风逝去的大量心血，接下来又会是什么？ahk8.com 和 ahkscript.org 并非二选一，但 AutoHotkey 中文用户本身不多（指愿意上论坛的），我不愿意看到再次一分为二。
-从持续性而言，ahk8.com 与 autohotkey.com 几乎没有区别。在 [AutoHotkey 之中国情](http://amnesiac10.github.io/2014/07/18/chinese-complex-of-autohotkey.html)中我曾提到许多中文爱好者为 AutoHotkey 付出很多，为什么中文论坛的人气那么差（可与 [AutoIt 中文论坛](http://www.autoitx.com)比较）？
+从持续性而言，ahk8.com 与 autohotkey.com 几乎没有区别。在 [AutoHotkey 之中国情]({{ site.url }}/2014/07/18/chinese-complex-of-autohotkey.html)中我曾提到许多中文爱好者为 AutoHotkey 付出很多，为什么中文论坛的人气那么差（可与 [AutoIt 中文论坛](http://www.autoitx.com)比较）？
 
 ## 我的期望
 一直以来，我都希望有一个供中文用户交流的稳定场所。只有在稳定的前提下，才能持续并向前发展。这几年一路走来，供中文用户交流的场所一直都有，却不够稳定，几度起落（更换域名、空间、论坛程序等），且管理时有时无、广告充斥、许多问题无人回答等。我和其他许多爱好者曾付出大量心血管理论坛、写教程、翻译维护帮助、帮助新人解决问题、推广等，其中的许多努力都没有成为历史积淀而是随时间流逝了。与 AutoIt 比起来，AutoHotkey 今日的冷清与此不无关系。
