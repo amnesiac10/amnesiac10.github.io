@@ -6,7 +6,7 @@ thread: 14
 categories: 指南
 tags:
 ---
-转者按：本文属于**零基础入门**专题教程，原[发表于博客中国](http://yonken.blogcn.com/diarypage.shtml?sortsid=100075373)（已失效），我曾[转载到中文论坛](http://ahk8.com/thread-3111-post-17835.html)，作者 yonken（[此处是他现在的博客](http://www.cnblogs.com/yonken/)，但原来的很多 AutoHotkey 内容丢失了）。本专题选取一些通俗易懂的基础入门教程，经适当整理（以反映目前 AutoHotkey 现状）后集中发表，以方便初次接触脚本的朋友入门（帮助中的[初学者向导](http://ahkcn.sourceforge.net/docs/Tutorial.htm)也是很好的入门教程）。
+转者按：本文属于**零基础入门**专题教程，原[发表于博客中国](http://yonken.blogcn.com/diarypage.shtml?sortsid=100075373)（已失效），我曾[转载到中文论坛](http://ahk8.com/thread-3111-post-17835.html)，作者 yonken（[此处是他现在的博客](http://www.cnblogs.com/yonken/)，但原来的很多 AutoHotkey 内容丢失了）。本专题选取一些通俗易懂的基础入门教程，经适当整理（以反映目前 AutoHotkey 现状）后集中发表，以方便初次接触脚本的朋友入门（帮助中的[初学者向导](http://ahkcn.github.io/docs/Tutorial.htm)也是很好的入门教程）。
 
 前言：据我了解需要编写 AutoHotkey/AutoIt 脚本来实现自动化操作的用户很多都是网管，其它则可能是一些个人用户，他们一般都具有相当的技术水平，而且都希望能借助脚本来完成某些以往需要人工操作的重复​性劳动，但限于语言条件上的限制可能对官方的帮助文档有较难理解之处。为方便读者，我将从最简单的说起，每个示例尽可能同时给出相应的 AHK 和 AU3 版本代码。本文将尽可​能用较通俗的语言描述，但并不打算讲解语法基础，所以不一定适合新手阅读。
 文中涉及到的 AHK/AU3 版本（注：这个是最初编写时的版本）：
@@ -96,7 +96,7 @@ AHK：
 AU3：`Run(@ProgramFilesDir & "\Internet Explorer\IEXPLORE.EXE http://ahkscript.org/")`
 
 B）打开特殊文件夹
-系统的某些特殊文件夹被定义了相应的 CLSID（请查看 [CLSID 列表](http://ahkcn.sourceforge.net/docs/misc/CLSID-List.htm)），我们可利用它来打开相应的文件夹，比如打开回收站：
+系统的某些特殊文件夹被定义了相应的 CLSID（请查看 [CLSID 列表](http://ahkcn.github.io/docs/misc/CLSID-List.htm)），我们可利用它来打开相应的文件夹，比如打开回收站：
 【示例 2.4.2 】
 AHK：`Run ::{645ff040-5081-101b -9f 08-00aa 002f 954e}`
 AU3：不适用！
@@ -263,9 +263,9 @@ Q：如何使用这两个工具？
 A：先打开你要进行操作的目标窗口，然后运行 Window Spy 或 AutoIt Window Info，接下来就是把鼠标移到目标控件上（比如某个按钮）：
 
 Window Spy 使用演示截图：
-![2014-07-05 210804.png](http://upload-images.jianshu.io/upload_images/19661-c2b1e31b44145f7d.png)
+![2014-07-05 210804.png](/assets/images/19661-c2b1e31b44145f7d.png)
 AutoIt Window Info 使用演示截图：
-![2014-07-06 061224.png](http://upload-images.jianshu.io/upload_images/19661-602dab3da12acff2.png)
+![2014-07-06 061224.png](/assets/images/19661-602dab3da12acff2.png)
 
 现在我们假设已打开并激活了“系统属性”窗口，而任务是点击它的“确定”按钮，则可用以下几种方法：
 【示例4.1.1】
@@ -331,7 +331,7 @@ Send("!f")
 然而，在真正实现自动化时仅靠上面的技术往往难以达到预期目的。下面开始进入最为重要的控件操作。
 ### 设置文本
 在安装软件的过程中用户往往需要提供一些必需信息，比如安装目录。很多用户并不喜欢把软件安装到默认的 C 盘而更愿意把它们安装到别的地方，那么脚本究竟提供了什么方法能让​我们修改如下图所示的路径呢？
-![2014-07-02 174402.png](http://upload-images.jianshu.io/upload_images/19661-e349bc97f65baf18.png)
+![2014-07-02 174402.png](/assets/images/19661-e349bc97f65baf18.png)
 我们先用上文中提到的 Window Spy 或 AutoIt Window Info 来获得这个路径的编辑框的信息，假设这个窗口的标题为 Setup foobar，该路径编辑框的类名是 Edit1，而我们需要把它改成“D:\foobar2000”，接下来就可以使用下列命令/函数来设置它的文本了：
 AHK：`ControlSetText [, 目标控件, 新文本, 窗口标题, 窗口文本, 排除标题, 排除文本]`
 AU3：`ControlSetText ( "窗口标题", "窗口文本", 控件ID, "新文本")`
@@ -343,7 +343,7 @@ AU3：`ControlSetText("Setup foobar", "", "Edit1", "D:\foobar2000")`
 
 ### 选中和取消选中单选框和复选框项目
 有时程序为了满足用户的个性化设置而需要用户提供更多的信息，我们经常会遇到这样的情况：
-![2014-07-02 194152.png](http://upload-images.jianshu.io/upload_images/19661-1b7e95d3afe9e54a.png)
+![2014-07-02 194152.png](/assets/images/19661-1b7e95d3afe9e54a.png)
 如何保证选中所需项目并取消某些项目呢？
 下面先来介绍 AHK 和 AU3 中用来对控件进行各种属性设置的命令/函数：
 AHK：`Control [, 命令, 值, 目标控件, 窗口标题, 窗口文本, 排除标题, 排除文本]`
@@ -373,7 +373,7 @@ ControlCommand("foobar", "", "Button14", "Check", "")
 
 ### 选择下拉列表的项目
 相信你肯定遇到过下面这种情况：
-![2014-07-02 174414.png](http://upload-images.jianshu.io/upload_images/19661-1577c38144700e20.png)
+![2014-07-02 174414.png](/assets/images/19661-1577c38144700e20.png)
 问题又来了：如何选中自己需要的项目？
 答案仍是使用上面提到的命令/函数。对这种控件而言，AHK 适用的命令是“Choose, N”和“ChooseString, String”，分别表示选中第 N 个项目和选中与字符串 String 匹配的项目；而 AU3 适用的命令则是“SetCurrentSelection, N”和“SelectString, String”，分别表示选中第 N+1（注意是从零开始表示！）个项目和选中与字符串 String 匹配的项目。
 

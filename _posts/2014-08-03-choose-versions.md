@@ -15,7 +15,7 @@ tags:
 
 ### 功能的增强
 
-它在 AutoHotkey Basic 基础上增加或增强的主要功能（详细说明请参阅 [AutoHotkey_L 新特性](http://ahkcn.sourceforge.net/docs/AHKL_Features.htm)）：
+它在 AutoHotkey Basic 基础上增加或增强的主要功能（详细说明请参阅 [AutoHotkey_L 新特性](http://ahkcn.github.io/docs/AHKL_Features.htm)）：
 
 * 提供 Unicode、COM 和 64 位原生支持
 * 支持各种文本编码

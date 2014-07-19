@@ -31,7 +31,7 @@ tags:
 
 ## Winspector
 ![](http://ww2.sinaimg.cn/mw690/6ef7171bgw1ehpduyk7fqj20l70d6wev.jpg)
-评论：最初是在[消息指南](http://ahkcn.sourceforge.net/docs/misc/SendMessage.htm)中看到该工具介绍的，我以前使用时大部分情况也是用来监控消息。现在看如果仅仅获取窗口或控件的信息，该工具不方便。
+评论：最初是在[消息指南](http://ahkcn.github.io/docs/misc/SendMessage.htm)中看到该工具介绍的，我以前使用时大部分情况也是用来监控消息。现在看如果仅仅获取窗口或控件的信息，该工具不方便。
 下载时建议下载 WinspectorU，即 Unicode 版本。
 
 ## Microsoft Spy++

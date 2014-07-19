@@ -6,7 +6,7 @@ thread: 5
 categories: 实例
 tags:
 ---
-字符串处理是脚本中最常见的一种操作，诚然，在这种操作中正则表达式的强大毋庸置疑，不过大多数人要使用它首先需要进行学习。在实际中，普通的字符串处理命令/函数能解决大量常见的情况，例如 [SubStr\(\)](http://ahkcn.sourceforge.net/docs/Functions.htm#SubStr) 和 [Instr\(\)](http://ahkcn.sourceforge.net/docs/Functions.htm#InStr) 的功能，在本文中将以具体实例介绍 [Sort](http://ahkcn.sourceforge.net/docs/commands/Sort.htm) 一些用法的灵活应用。
+字符串处理是脚本中最常见的一种操作，诚然，在这种操作中正则表达式的强大毋庸置疑，不过大多数人要使用它首先需要进行学习。在实际中，普通的字符串处理命令/函数能解决大量常见的情况，例如 [SubStr\(\)](http://ahkcn.github.io/docs/Functions.htm#SubStr) 和 [Instr\(\)](http://ahkcn.github.io/docs/Functions.htm#InStr) 的功能，在本文中将以具体实例介绍 [Sort](http://ahkcn.github.io/docs/commands/Sort.htm) 一些用法的灵活应用。
 
 ## 来自论坛的问题
 为了方便之后分析，这里把[整个问题](http://ahk8.com/qa/255/)引用过来：
@@ -32,16 +32,16 @@ tags:
 > run d:\PDFtk\bin\pdftk.exe %A% %B% %C% output "d:\1\合并.pdf"  
 
 ## 具体分析问题
-首先，这肯定属于字符串处理，且为排序问题。字符串排序？自然联想到  [Sort 命令](http://ahkcn.sourceforge.net/docs/commands/Sort.htm)。
+首先，这肯定属于字符串处理，且为排序问题。字符串排序？自然联想到  [Sort 命令](http://ahkcn.github.io/docs/commands/Sort.htm)。
 
-* 如果您什么想法都没有，这是基本的熟悉程度待提升。很多命令可能一时用不到，但需要基本了解，最基本的可以从查看帮助目录和[命令与函数索引](http://ahkcn.sourceforge.net/docs/commands/index.htm)开始。
+* 如果您什么想法都没有，这是基本的熟悉程度待提升。很多命令可能一时用不到，但需要基本了解，最基本的可以从查看帮助目录和[命令与函数索引](http://ahkcn.github.io/docs/commands/index.htm)开始。
 
 不过粗略观察后可以发现，直接用 Sort 显然不行，需要进行前期处理，例如：
 `d:\1\72EF1017BB29B0302F7E57419E8999D83yhiahzU~ahzU79~04~16-65.pdf`
 为了排序，可以先转换成 `16-65.pdf`，这通过字符串替换完成，实际可以有多种操作方法：
 
 * 通过 Instr() 找到**最后一个 ~**（或 `~ahzU79~04~` 的位置，接着 SubStr() 提取（可自由选择类似的命令，这里是我个人习惯）；
-* 通过正则表达式利用 [RegExReplace\(\)](http://ahkcn.sourceforge.net/docs/commands/RegExReplace.htm) 提取，我想会正则的同学很容易考虑到这点吧，这里不作为首要考虑；
+* 通过正则表达式利用 [RegExReplace\(\)](http://ahkcn.github.io/docs/commands/RegExReplace.htm) 提取，我想会正则的同学很容易考虑到这点吧，这里不作为首要考虑；
 
 实际中，可以先重命名文件、接着排序新文件名、然后直接构造为 pdftk.exe 的参数（无需又麻烦的赋值给 A、B、C 了）。此外，如果不重命名文件则需考虑用自定义排序（请参照帮助）。
 上面是我的思路，下面说说我的具体方法，如果您有兴趣先自己动动手？

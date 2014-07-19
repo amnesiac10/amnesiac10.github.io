@@ -7,12 +7,12 @@ categories: 指南
 tags:
 ---
 注：中文应用部分仍需更新。
-转者按：本文属于**零基础入门**专题教程，原[发表于 Download!网络密技王第三期](http://www.pcuser.com.tw/bookdetail.aspx?Number=2AS503)，后[转载至简睿随笔](http://jdev.tw/blog/734/autohotkey-introduction-chinese)，作者简睿。本专题选取一些通俗易懂的基础入门教程，经适当调整（以反映目前 AutoHotkey 现状）后集中发表，以方便初次接触脚本的朋友入门（帮助中的[初学者向导](http://ahkcn.sourceforge.net/docs/Tutorial.htm)也是很好的入门教程）。注：原文为繁体中文，为方便简体用户，经 [OpenCC](http://code.google.com/p/opencc/) 转换为简体中文，某些用词（主要为计算机术语）可能转换有误，一般不影响理解。
+转者按：本文属于**零基础入门**专题教程，原[发表于 Download!网络密技王第三期](http://www.pcuser.com.tw/bookdetail.aspx?Number=2AS503)，后[转载至简睿随笔](http://jdev.tw/blog/734/autohotkey-introduction-chinese)，作者简睿。本专题选取一些通俗易懂的基础入门教程，经适当调整（以反映目前 AutoHotkey 现状）后集中发表，以方便初次接触脚本的朋友入门（帮助中的[初学者向导](http://ahkcn.github.io/docs/Tutorial.htm)也是很好的入门教程）。注：原文为繁体中文，为方便简体用户，经 [OpenCC](http://code.google.com/p/opencc/) 转换为简体中文，某些用词（主要为计算机术语）可能转换有误，一般不影响理解。
 
 ## AutoHotkey 的高度定制功能，让你成为效率高手
 
 如果你分析每天操作电脑时所重复执行的动作——相同的网址、相同的电子信箱、相同的文本输入等等，你会惊讶的发现重复频率之高令人咋舌。如果你想从诸多的重复动作里解脱而出，并且能有效提升操作电脑的效率，那么 AutoHotkey 是你不能错过的工具，善用 AutoHotkey 将让你轻而易举的成为效率高手。
-![AutoHotkey_logo.gif](http://upload-images.jianshu.io/upload_images/19661-856ab045663259d4.gif)
+![AutoHotkey_logo.gif](/assets/images/19661-856ab045663259d4.gif)
 软件名称： AutoHotkey
 软件版本：1.1.15.01
 软件大小：2+MB
@@ -43,9 +43,9 @@ AutoHotkey 的基本功能介绍完毕，以下进入主题。首先说明 AutoH
 ## AutoHotkey 下载与安装
 
 3. 使用 IE 或 FireFox 等浏览器进入[下载页](http://ahkscript.org/download/)，点击「Installer」开始下载，当「文件下载」对话盒出现后，选取你常用的工具文件夹，把文件存入此文件夹。（注：该安装包已包含了后面几个链接中的文件，那些链接适合老用户。）在页面下方还有前往中文帮助的下载链接。
-![2014-07-07 163635.png](http://upload-images.jianshu.io/upload_images/19661-14fe1cc1dc28acdc.png)
+![2014-07-07 163635.png](/assets/images/19661-14fe1cc1dc28acdc.png)
 3. 下载后的「AutoHotkey111501_Install.exe」就是安装执行档，请双击此文件以执行安装步骤（若已安装过旧版本，则会提示直接更新或自定义更新）。
-![2014-07-07 162219.png](http://upload-images.jianshu.io/upload_images/19661-b924b015d433cb89.png)
+![2014-07-07 162219.png](/assets/images/19661-b924b015d433cb89.png)
  * 典型安装：使用默认选项安装到默认位置中，建议新用户选择，之后请直接跳到第六步
  * 自定义安装：可在后续对话框中选择各选项、安装位置等，适合老用户，点击后进入下一页
  * 你也可以把它装到 USB 随身碟里以增进可携性，即点击右下角“extract to...”并指定目标目录直接提取压缩文件。
@@ -53,13 +53,13 @@ AutoHotkey 的基本功能介绍完毕，以下进入主题。首先说明 AutoH
  * Unicode 32-bit：没有特殊情况都推荐使用。
  * Unicode 64-bit：在 64 位系统中性能更强，仅在 64 位系统中安装时才会出现。
  * ANSI 32-bit：与某些旧脚本（主要指 AutoHotkey Basic）的兼容性更好。
-![2014-07-07 162228.png](http://upload-images.jianshu.io/upload_images/19661-9fdd54b5309b8d90.png)
+![2014-07-07 162228.png](/assets/images/19661-9fdd54b5309b8d90.png)
 3. 指定安装的文件夹，缺省是「C:\Program Files\AutoHotkey」，还可以选择不创建开始菜单中的快捷方式，最后按〔Next〕。
-![2014-07-07 162234.png](http://upload-images.jianshu.io/upload_images/19661-009898e012ec233c.png)
+![2014-07-07 162234.png](/assets/images/19661-009898e012ec233c.png)
 3. 接着选取要安装的类型，如果想安装脚本编译器的话，则保持【Install script compiler】的勾选状态；想启动 .ahk 文件的拖拉功能的话，把【Enable drag & drop】选项勾选起来，最后按〔Install〕。
-![2014-07-07 162244.png](http://upload-images.jianshu.io/upload_images/19661-95b3d8fd1499bc45.png)
+![2014-07-07 162244.png](/assets/images/19661-95b3d8fd1499bc45.png)
 3. 文件解压缩并复制后即告全部安装结束。此时可以打开帮助文档或看看本版本的更新内容或运行 AutoHotkey，也可以点击“Exit”直接退出。
-![2014-07-07 162250.png](http://upload-images.jianshu.io/upload_images/19661-29567c5d17115712.png)
+![2014-07-07 162250.png](/assets/images/19661-29567c5d17115712.png)
 
 AutoHotkey 安装完成后不必重新启动电脑，尔后扩展名 .ahk 会自动关联到 AutoHotkey.exe，只要双击扩展名为 .ahk 的文件就能启动 AutoHotkey 来读取该文件的内容，再依脚本档内容来设置键盘与鼠标。AutoHotkey 安装文件夹里有几个重要文件要请大家注意：
 
@@ -75,7 +75,7 @@ Installer.ahk | 安装程序的 ahk 脚本，结构工整、形式优美，可�
 
 ## 由简单的范例开始使用 AutoHotkey 的热字串
 请用【开始→程序集→附属应用程序→记事本】启动记事本（或使用你惯用的文本编辑程序），输入以下内容后保存成 test1.ahk。
-![autohotkey-07.png](http://upload-images.jianshu.io/upload_images/19661-00bcbacb6b73a5c5.png)
+![autohotkey-07.png](/assets/images/19661-00bcbacb6b73a5c5.png)
 以上是常用网址与常用电子邮件的几个热字串范例，提示几个重点：
 
 * 每行若以半角分号开头则表示此列是说明注解，不会被执行
@@ -92,7 +92,7 @@ w! | Enter | http://www.wretch.cc
 @g | 空白 | @gmail.com
 @m | 空白 | @Your_Mail_Address.com.tw
 
-触发符号要使用〔空白〕或〔Enter〕键悉听尊便，我个人是习惯用〔空白〕（更多触发符号请参阅[终止符](http://ahkcn.sourceforge.net/docs/Hotstrings.htm#EndChars)）。另外，为了避免在中文输入状态下使用到拆字按键而造成中文无法正常输入，**建议关键字以一个特殊字符开头或结尾**，例如范例中的惊叹号与 @ 符号，不过此二符号必须加按〔Shift〕键，不甚方便也影响输入速度，建议可使用单键符号，例如单引号、分号、斜线或逗点等来组成关键字，我个人常用的是单引号、斜线与逗点，最好是选用中文输入法未使用到的字符，以方便能在中文状态下也能输入。以下是修改成单引号与斜线后的范例：
+触发符号要使用〔空白〕或〔Enter〕键悉听尊便，我个人是习惯用〔空白〕（更多触发符号请参阅[终止符](http://ahkcn.github.io/docs/Hotstrings.htm#EndChars)）。另外，为了避免在中文输入状态下使用到拆字按键而造成中文无法正常输入，**建议关键字以一个特殊字符开头或结尾**，例如范例中的惊叹号与 @ 符号，不过此二符号必须加按〔Shift〕键，不甚方便也影响输入速度，建议可使用单键符号，例如单引号、分号、斜线或逗点等来组成关键字，我个人常用的是单引号、斜线与逗点，最好是选用中文输入法未使用到的字符，以方便能在中文状态下也能输入。以下是修改成单引号与斜线后的范例：
 
 输入文本 | 触发符号 | 替换后的内容
 -|-|-
@@ -106,7 +106,7 @@ w! | Enter | http://www.wretch.cc
 
 1. 在右下角 System Tray 找到 AutoHotkey 的 H 图标后，按右键选【Exit】以结束目前的 AutoHotkey，再双击修改后的 test1.ahk 以重新启动 AutoHotkey
 1. 第二个是较简便的方法，一样开启 System Tray 的 H 图标后，按右键选【Reload This Script】即可重新读入修改后的脚本指令
-![2014-07-06 094355.png](http://upload-images.jianshu.io/upload_images/19661-1ae9e7eb3b54b54f.png)
+![2014-07-06 094355.png](/assets/images/19661-1ae9e7eb3b54b54f.png)
 
 ## 常用的几种热字串范例
 
@@ -194,7 +194,7 @@ w! | Enter | http://www.wretch.cc
 
 ## 热字串配合使用 AutoHotkey 的按键字串
 
-如果你在浏览器网址列输入范例内的热字串后，可能会想是否能让热字串能自动输出〔Enter〕键呢？如果可以的话，我们就可以少按一个〔Enter〕键了，这个需求只要在热字串里加上按键字串就能轻而易举的达成。AutoHotkey 按键的写法是在按键名称前后加上大括号，因此 `{enter}` 就代表〔Enter〕键，`{home}` 就代表〔Home〕键，以下枚举几个常用的按键（更多可用按键请参阅[按键和按钮列表](http://ahkcn.sourceforge.net/docs/KeyList.htm)）：
+如果你在浏览器网址列输入范例内的热字串后，可能会想是否能让热字串能自动输出〔Enter〕键呢？如果可以的话，我们就可以少按一个〔Enter〕键了，这个需求只要在热字串里加上按键字串就能轻而易举的达成。AutoHotkey 按键的写法是在按键名称前后加上大括号，因此 `{enter}` 就代表〔Enter〕键，`{home}` 就代表〔Home〕键，以下枚举几个常用的按键（更多可用按键请参阅[按键和按钮列表](http://ahkcn.github.io/docs/KeyList.htm)）：
 
 <pre>
 <table>
@@ -251,7 +251,7 @@ w! | Enter | http://www.wretch.cc
 ::/g:: | @gmail.com{Home} | 空白 | 输入 `/g` 会输出电子邮件并将光标移到开头位置（如同按下〔Home〕键）
 ::’img:: | {Left 2} | 空白 | 输入 `’img` 替换成标签，且将光标移到双引号里面，但因为 AutoHotkey 缺省会把触发符号也输出，造成光标左移到双引号里后又多输出当做触发符号的空白
 
-AutoHotkey 热字串的替换依据不同的需求会有不同的选项，用户能很方便地设置不同的功能；热字串选项是写在开头两个冒号中间，格式是「**:选项:**」，举几个例子说明常用的选项（更多选项请参阅[热字串选项](http://ahkcn.sourceforge.net/docs/Hotstrings.htm#Options)）：
+AutoHotkey 热字串的替换依据不同的需求会有不同的选项，用户能很方便地设置不同的功能；热字串选项是写在开头两个冒号中间，格式是「**:选项:**」，举几个例子说明常用的选项（更多选项请参阅[热字串选项](http://ahkcn.github.io/docs/Hotstrings.htm#Options)）：
 
 <pre>
 <table>
@@ -309,7 +309,7 @@ AutoHotkey 热字串的替换依据不同的需求会有不同的选项，用户
 
 ## AutoHotkey 的热键设置方式
 
-热键的设置也是很容易就能轻松完成，格式是「热键::执行的指令」，热键和要执行的指令间夹有两个半角冒号。热键有许多按键组合，以下是几个特殊的按键符号（更多前缀符号请参阅[热键修饰符](http://ahkcn.sourceforge.net/docs/Hotkeys.htm#Symbols)）：
+热键的设置也是很容易就能轻松完成，格式是「热键::执行的指令」，热键和要执行的指令间夹有两个半角冒号。热键有许多按键组合，以下是几个特殊的按键符号（更多前缀符号请参阅[热键修饰符](http://ahkcn.github.io/docs/Hotkeys.htm#Symbols)）：
 
 <pre>
 <table>
@@ -400,7 +400,7 @@ Run c:\Wndows\notepad.exe
 return
 {% endhighlight %}
 
-设置好并重新加载后试一下是否成功了呢？咦？好像不行……很有可能是你电脑的系统目录和范例里的位置不同，比如操作系统的系统数据可能是 C:\Windows 或 C:\WINNT 或安装系统时自行指定的文件夹名称，因此若想让一个指令适用多个作业环境的话，就必须使用内置变量来替代固定的文件夹名称，以下是几个你可能会使用到的与文件夹相关的内置变量（更多的文件夹内置变量请参阅[操作系统和用户信息](http://ahkcn.sourceforge.net/docs/Hotkeys.htm#Symbols)）：
+设置好并重新加载后试一下是否成功了呢？咦？好像不行……很有可能是你电脑的系统目录和范例里的位置不同，比如操作系统的系统数据可能是 C:\Windows 或 C:\WINNT 或安装系统时自行指定的文件夹名称，因此若想让一个指令适用多个作业环境的话，就必须使用内置变量来替代固定的文件夹名称，以下是几个你可能会使用到的与文件夹相关的内置变量（更多的文件夹内置变量请参阅[操作系统和用户信息](http://ahkcn.github.io/docs/Hotkeys.htm#Symbols)）：
 
 内置变量 | 用途 | 范例
 -|-|-
@@ -493,7 +493,7 @@ return
 {% endhighlight %}
 
 ## AutoHotkey 的中文应用
-（本段内容仍待整理）还有多少用户曾记得无法直接支持中文（准确说是仅支持 ANSI 字符）的热字串？当时要[实现替换为中文有两种方法](http://jdev.tw/blog/713/autohotkey-output-chinese)，一是使用剪贴板，二是利用 [Send 命令](http://ahkcn.sourceforge.net/docs/commands/Send.htm)的 `{ASC nnnnn}` 输出 Unicode 字符（某些程序可能不支持，包括其 Unicode 版本）。
+（本段内容仍待整理）还有多少用户曾记得无法直接支持中文（准确说是仅支持 ANSI 字符）的热字串？当时要[实现替换为中文有两种方法](http://jdev.tw/blog/713/autohotkey-output-chinese)，一是使用剪贴板，二是利用 [Send 命令](http://ahkcn.github.io/docs/commands/Send.htm)的 `{ASC nnnnn}` 输出 Unicode 字符（某些程序可能不支持，包括其 Unicode 版本）。
 
 Word 有提供把特殊符号指定给按键的用法，但只能在 Word 里使用，如果通过 AutoHotkey 设置，那么不管你操作的是那一种程序，统统都能适用。下面我们用一些热键设置来方便输入中文的标点符号。
 
@@ -735,7 +735,7 @@ return
 
 * [官方网站](http://ahkscript.org/)、[论坛](http://ahkscript.org/boards/)及[其中文子论坛](http://ahkscript.org/boards/viewforum.php?f=26)
 * [中文爱好者论坛](http://ahk8.com/)
-* 中文帮助：帮助是很好的参考手册，同时自带了很好的[初学者向导](http://ahkcn.sourceforge.net/docs/Tutorial.htm)
+* 中文帮助：帮助是很好的参考手册，同时自带了很好的[初学者向导](http://ahkcn.github.io/docs/Tutorial.htm)
 * 本博客中更多的 AutoHotkey 使用经验和技巧：[AutoHotkey 分类][1]、[AutoHotkey 标签][2]
 
 [1]: http://jdev.tw/blog/category/software-and-tools/autohotkey-keyboard

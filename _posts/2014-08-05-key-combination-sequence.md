@@ -28,7 +28,7 @@ tags:
 
 ### 自定义组合键
 
-仅有四个修饰键是不够的：一方面很多修饰键组合已被利用，第二有些组合用起来也麻烦，如包含了三个修饰键的组合键。不过 AutoHotkey 把修饰键的范围从这四个扩大到了几乎每个按键甚至鼠标和游戏杆按钮（普通按键或鼠标按钮作为修饰键使用时会自动使用钩子，可从 [ListHotkeys](http://ahkcn.sourceforge.net/docs/commands/ListHotkeys.htm) 界面中观察验证）：
+仅有四个修饰键是不够的：一方面很多修饰键组合已被利用，第二有些组合用起来也麻烦，如包含了三个修饰键的组合键。不过 AutoHotkey 把修饰键的范围从这四个扩大到了几乎每个按键甚至鼠标和游戏杆按钮（普通按键或鼠标按钮作为修饰键使用时会自动使用钩子，可从 [ListHotkeys](http://ahkcn.github.io/docs/commands/ListHotkeys.htm) 界面中观察验证）：
 
 {% highlight ahk linenos %}
 a & k::MsgBox 您在按住 a 时按下了 k 键。
@@ -64,7 +64,7 @@ $ 表示使用钩子创建这个热键，这样避免了循环激发（上面的
 :*:r@::rhong@somewhere.com ; 输入 r@ 后自动替换为邮件地址。
 {% endhighlight %}
 
-这里的选项在第一对引号的两个中间，更多选项请参阅帮助中[热字串和自动替换部分](http://ahkcn.sourceforge.net/docs/Hotstrings.htm#Options)。这里的热字串实现了自动替换，实际中可用于扩展缩写、纠正拼写错误等。不过，热字串也可以执行命令：
+这里的选项在第一对引号的两个中间，更多选项请参阅帮助中[热字串和自动替换部分](http://ahkcn.github.io/docs/Hotstrings.htm#Options)。这里的热字串实现了自动替换，实际中可用于扩展缩写、纠正拼写错误等。不过，热字串也可以执行命令：
 
 {% highlight ahk linenos %}
 ::btw::
@@ -78,7 +78,7 @@ return
 ## 原理
 
 每一次按键，在系统中包含了两次的按键事件：
-![key history.png](http://upload-images.jianshu.io/upload_images/19661-1205c08560f2505a.png)
+![key history.png](/assets/images/19661-1205c08560f2505a.png)
 红色背景区域的内容表示我按了一次 h 键：先按下，后松开。为了方便，暂且表示为 `{h down}`、`{h up}`。这说明什么？
 
 在组合键 a & k:: 中，可以表示为：`{a down}{k down}{k up}{a up}`
