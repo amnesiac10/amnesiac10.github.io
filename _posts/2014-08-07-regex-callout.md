@@ -53,7 +53,7 @@ abc
 ## 返回值的用途
 在 AutoHotkey 中，目前 [RegExMatch()](http://ahkcn.github.io/docs/commands/RegExMatch.htm) 和 [RegExReplace()](http://ahkcn.github.io/docs/commands/RegExReplace.htm) 都支持调出功能，这里简单说说它们具体是如何支持的。
 
-> 调出函数最多可以定义 5 个参数：   
+> 调出函数最多可以定义 5 个参数：
 >
 > * Match: 相当于 RegExMatch 中的 UnquotedOutputVar, 包含需要时数组变量的创建.
 
