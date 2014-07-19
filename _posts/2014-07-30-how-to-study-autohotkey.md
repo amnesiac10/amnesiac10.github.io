@@ -43,5 +43,5 @@ tags:
 为方便初次接触脚本的朋友，本专题选取一些通俗易懂的基础入门教程，经适当整理（以反映目前 AutoHotkey 现状）后集中发表，以方便初次接触脚本的朋友入门（帮助中的[初学者向导](http://ahkcn.github.io/docs/Tutorial.htm)也是很好的入门教程）。目前包含以下教程：
 
 * [让重复工作一键完成](http://amnesiac10.github.io/2014/07/31/one-key-for-repeat-tasks.html)
-* [自动化操作轻松入门](http://amnesiac10.github.io/2014/07/30/learn-to-do-automatically.html)
+* [自动化操作轻松入门](http://amnesiac10.github.io/2014/07/30/make-processes-automatically.html)
 * [AHK 快餐店系列索引](http://amnesiac10.github.io/2014/07/25/ahk-fast-food-restaurant.html)
