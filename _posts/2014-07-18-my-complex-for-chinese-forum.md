@@ -4,7 +4,7 @@ layout: post
 title: amnesiac的中文论坛情结
 thread: 1
 categories: 其他
-tags: 中文论坛
+tags: 中文论坛 ahkcn
 ---
 注：写本文时又回到了对 AutoHotkey 激情飞扬的时代，就如向一堆灰烬中撒入了点点星火，很抱歉行文的混乱。接着抱怨一下，原想用微信公众号 autohotkey 代替[目前的邮件列表](http://lists.sourceforge.net/lists/listinfo/ahkcn-user)，结果不清楚哪位朋友注册了，我只好先放着吧。
 
