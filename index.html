@@ -13,12 +13,13 @@ layout: page
   	{% if month != m %}
    		{% assign month = m %}
 			<li class="listing-seperator">{{ y }} - {{ m }}</li>
+  	{% endif %}
   {% endif %}
   <li class="listing-item">
     <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     {% if post.excerpt %}
-		<p>{{ post.excerpt }}</p>
+		<small>{{ post.excerpt | strip_html | truncate: site.truncate }}</small>
     {% endif%}
     {% if site.truncate %}
     <p>{{ post.content | strip_html | truncate: site.truncate }}</p>
