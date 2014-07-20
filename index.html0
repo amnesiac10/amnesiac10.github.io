@@ -9,17 +9,11 @@ layout: page
   {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
   {% if year != y %}
     {% assign year = y %}
-  	{% capture m %}{{post.date | date:"%m"}}{% endcapture %}
-  	{% if month != m %}
-   		{% assign month = m %}
-			<li class="listing-seperator">{{ y }} - {{ m }}</li>
+    <li class="listing-seperator">{{ y }}</li>
   {% endif %}
   <li class="listing-item">
     <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    {% if post.excerpt %}
-		<p>{{ post.excerpt }}</p>
-    {% endif%}
     {% if site.truncate %}
     <p>{{ post.content | strip_html | truncate: site.truncate }}</p>
     {% endif%}
