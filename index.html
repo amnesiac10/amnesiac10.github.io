@@ -19,7 +19,7 @@ layout: page
     <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     {% if post.excerpt %}
-		<small>{{ post.excerpt | strip_html | truncate: site.truncate }}</small>
+		<small>{{ post.excerpt | strip_html | truncate: post.excerpt }}</small>
     {% endif%}
     {% if site.truncate %}
     <p>{{ post.content | strip_html | truncate: site.truncate }}</p>
