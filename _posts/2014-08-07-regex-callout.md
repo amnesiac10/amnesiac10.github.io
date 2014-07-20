@@ -25,7 +25,7 @@ MsgBox, % FoundPos
 
 这里显示为 0，告诉我们它没有找到匹配。从逻辑分析：源字符串中 `xyz` 在换行符之前，在匹配模式中使用了多行匹配选项（即 `m`），这样 `$` 应该可以匹配换行符之前的位置，为什么没有匹配呢？现在开始一步步排除问题，首先直接使用 `xyz` 直接匹配源文本肯定没问题，那么问题会在哪里？
 
-```AutoHotkey
+{% highlight ahk %}
 Source := "Haystack`nxyz`nabc"
 FoundPos := RegexMatch(Source, "m)xyz(?CCallout)$")
 MsgBox, % FoundPos
@@ -33,7 +33,7 @@ MsgBox, % FoundPos
 Callout(m) {
   MsgBox, m=%m%
 }
-```
+{% endhighlight %}
 
 其中，`(?CCallout)` 是调出语法，详细说明请参阅[正则表达式调出](http://ahkcn.github.io/docs/misc/RegExCallout.htm)。在正则表达式进行匹配过程中，调用了 Callout() 函数且显示此时模式匹配的字符串为 `xyz`，注意调出语法的插入点是在 `xyz` 后但 `$` 之前，它表示在源字符串中寻找到**该插入点之前模式**的匹配字符串时即执行相应的调出函数（并把此时的匹配传递过去），这样说明 `m)xyz` 也是能匹配的，显然问题出在 `$` 上。再仔细看看[正则表达式快速参考](http://ahkcn.github.io/docs/misc/RegEx-QuickRef.htm)会发现，AutoHotkey 中默认的新行符为 \`r\`n，而这里只有单个换行符，所以无法匹配。
 
