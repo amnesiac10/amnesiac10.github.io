@@ -9,9 +9,10 @@
 * |\.|._)._)
 * --------------------------------- */
 
-@import url(http://fonts.googleapis.com/css?family=Galdeano);
-@import url(http://fonts.googleapis.com/css?family=Electrolize);
-@import url(http://fonts.googleapis.com/css?family=Cuprum);
+; 在程序源代码中找到调用Google免费字体库的地址，将Google免费字体库的域名 fonts.googleapis.com 修改为：fonts.useso.com 即可。
+@import url(http://fonts.useso.com/css?family=Galdeano);
+@import url(http://fonts.useso.com/css?family=Electrolize);
+@import url(http://fonts.useso.com/css?family=Cuprum);
 body{font-size:14px;word-spacing:1px;
 	margin-left:auto;
 margin-right:auto;

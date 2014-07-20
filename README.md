@@ -12,7 +12,9 @@ AutoHotkey 特点介绍、编写经验及使用心得等。<br /><br />如果喜
 * 增加了语法高亮插件 pygments 所需文件 pygments.css，不过对于 ahk 高亮样式有点丑
 * 高亮语法为 {% highlight ahk %}、{% endhighlight %}。
 * 调整源文件结构：[从命名文件夹改为命名 HTML 文件](http://jekyllcn.com/docs/pages/)
-* 把到内部文章、图片和下载资源的链接使用 {{ site.url }} 表示，而不使用相对链接或具体网址的绝对链接
+* 把[到内部资源（如图片或其他文件）的链接使用 {{ site.url }} 表示](http://jekyllcn.com/docs/posts/#section-3)，而不使用相对链接或具体网址的绝对链接
+* [文章内链使用 post_url 变量表示](http://jekyllcn.com/docs/templates/#post-url)
+* 把引用的谷歌网络字体库替换为国内的缓存，如将 Google 免费字体库的域名 http://fonts.googleapis.com 修改为：http://fonts.useso.com 即可
 
 <br />
 一些注意事项：
