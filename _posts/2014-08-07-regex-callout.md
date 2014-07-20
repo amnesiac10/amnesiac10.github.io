@@ -25,7 +25,7 @@ MsgBox, % FoundPos
 
 这里显示为 0，告诉我们它没有找到匹配。从逻辑分析：源字符串中 `xyz` 在换行符之前，在匹配模式中使用了多行匹配选项（即 `m`），这样 `$` 应该可以匹配换行符之前的位置，为什么没有匹配呢？现在开始一步步排除问题，首先直接使用 `xyz` 直接匹配源文本肯定没问题，那么问题会在哪里？
 
-```ahk
+```AutoHotkey
 Source := "Haystack`nxyz`nabc"
 FoundPos := RegexMatch(Source, "m)xyz(?CCallout)$")
 MsgBox, % FoundPos
