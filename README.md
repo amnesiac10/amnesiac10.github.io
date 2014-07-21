@@ -16,6 +16,12 @@ AutoHotkey 特点介绍、编写经验及使用心得等。<br /><br />如果喜
 * [文章内链使用 post_url 变量表示](http://jekyllcn.com/docs/templates/#post-url)
 * 把引用的谷歌网络字体库替换为国内的缓存，如将 Google 免费字体库的域名 http://fonts.googleapis.com 修改为：http://fonts.useso.com 即可
 
+* 文章内链
+	* THML：`{% post_url 2010-07-21-name-of-post %}`
+	* MD：`[Name of link]({% post_url 2010-07-21-name-of-post %})`
+* 图片：`![备用图片提示文本]({{ site.url }}/assets/images/20140720000.png)`
+* 其他文件：`[备用资源提示文本]({{ site.url }}/assets/downloads/12345.pdf)`
+
 <br />
 一些注意事项：
 * 图片和下载的文件分别放在 `assets` 目录的 `images` 和 `downloads` 中
