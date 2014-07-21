@@ -4,11 +4,10 @@ layout: post
 title: 视频网站瞬间提速（适用于优酷、爱奇艺、搜狐、乐视、土豆等）
 thread: 4
 categories: 即用
-tags:
+tags: 在线视频 Flash
 ---
 注：原本想直接转载过来就放了，但大家热烈响应出乎意料，看来想偷懒也不行啊。
 
-<pre>
 <div id="p2pprivacy" class="swfcontent"><embed type="application/x-shockwave-flash" src="http://www.macromedia.com/support/flashplayer/sys/settingsmanager.swf" id="p2pprivacy_swf" name="p2pprivacy_swf" bgcolor="#ffffff" quality="high" scale="noscale" wmode="opaque" flashvars="defaultTab=p2p_privacy" height="270" width="395"></div>
 
 <script type="text/javascript">
@@ -30,7 +29,6 @@ swfo.addVariable( "defaultTab", "p2p_privacy" );
 registerSWFObject( swfo, "p2pprivacy" );
    // ]]>
   </script>
-</pre>
 
 现在看视频真方便，有浏览器就够了。不过在网站上看视频，除了不用安装播放器，其他都和播放器播放无差别吗？
 
@@ -43,8 +41,6 @@ registerSWFObject( swfo, "p2pprivacy" );
 很抱歉这里的代码块没有全选或另存为文件的按钮。
 
 ## 论坛中[兔子的脚本](http://ahk8.com/thread-5259.html)
-
-
 
 {% highlight ahk %}
 if not A_IsAdmin
@@ -96,6 +92,7 @@ ExitApp
 脚本很直白，无需再解释了。有重复代码，对新人而言先理解较重要。
 
 ## 评论中[芍青的脚本](http://zhuanlan.zhihu.com/autohotkey/19794762#comment-57490745)
+
 经过简单的风格整理：
 
 {% highlight ahk %}
@@ -123,7 +120,7 @@ MMSFileList =
 %USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Pepper Data\Shockwave Flash\System\mms.cfg ; Chrome 内置 Flash 的配置文件
 )
 ; 把每个文件解析出来
-Loop, Parse, MMSFileList, `n, %A_Space%%A_Tab% ; ??
+Loop, Parse, MMSFileList, `n, %A_Space%%A_Tab% ; 未执行验证
 {
   MsgBox, % A_LoopField
   If FileExist(A_LoopField)
@@ -153,6 +150,7 @@ DisableP2P(mmscfg)
 扩展性较好，便于自己或他人后续维护。
 
 ## 真相到底是什么
+
 为什么上传会影响下载速度呢（具体表现是上传速度较大时下载明显卡起来）？http://www.williamlong.info/archives/3304.html
 
 所以解决的方法很简单，通过修改 Flash 配置文件来禁用其 P2P 功能。此操作没有任何副作用（经过我几个月使用的实际测试），效果非常显著（现在非常非常少的时候我看“超​清”会卡）。
