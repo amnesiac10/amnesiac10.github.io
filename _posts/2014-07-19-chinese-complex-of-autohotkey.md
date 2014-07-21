@@ -14,7 +14,7 @@ tags: ahkcn 历史
 
 ## 国内发展史
 
-国内用户接触到 AutoHotkey 最早大概在 2005 年（早期开发历史可参阅维基百科 [AutoHotkey 条目](http://zh.wikipedia.org/wiki/AutoHotkey)），当时网上能找到零星的中文资料。现在记忆犹新的是 yonken 的博客（记忆中最早在 blogcn.com，之后辗转多处），里面发了许多译自帮助的内容，也写了不少即用型脚本。此后，还写了[自动化操作轻松入门系列]({% post_url /_posts/2014-07-31-make-process-automatical %})（原网址已不可考）并把已翻译的内容打包成中文帮助（即 1.0.36.06 版本，现在仍可从 [AutoHotkey 中文化项目](http://sourceforge.net/projects/ahkcn/)下载我收藏的版本）。若说国内推广，他当推第一人。可惜，他的博客历经变迁，多数文章现在都看不到了。
+国内用户接触到 AutoHotkey 最早大概在 2005 年（早期开发历史可参阅维基百科 [AutoHotkey 条目](http://zh.wikipedia.org/wiki/AutoHotkey)），当时网上能找到零星的中文资料。现在记忆犹新的是 yonken 的博客（记忆中最早在 blogcn.com，之后辗转多处），里面发了许多译自帮助的内容，也写了不少即用型脚本。此后，还写了[自动化操作轻松入门系列]({{ site.url }}/2014/07/30/make-process-automatical.html)（原网址已不可考）并把已翻译的内容打包成中文帮助（即 1.0.36.06 版本，现在仍可从 [AutoHotkey 中文化项目](http://sourceforge.net/projects/ahkcn/)下载我收藏的版本）。若说国内推广，他当推第一人。可惜，他的博客历经变迁，多数文章现在都看不到了。
 
 2006 年末，xbeta 写了[《AutoHotkey 0级入门教程:让重复工作一键完成》](http://blog.sina.com.cn/s/blog_46dac66f010005g7.html)，被转载到太平洋电脑网（此时更名为[《演绎段氏"凌波微步" AutoHotkey 0级入门教程》](http://arch.pconline.com.cn//pcedu/soft/gj/others/0609/872613.html)）。此后几年在其新浪博客中写了许多实际应用文章开始着力推广 AutoHotkey（请参阅[搜索“AutoHotkey”_善用佳软](http://blog.sina.com.cn/search/search.php?uid=1188742767&keyword=autohotkey)）及在其独立博客中的更多文章（参阅：<http://xbeta.info/tag/autohotkey>）。
 ![“AutoHotkey”搜索趋势对比图]({{ site.url }}/assets/images/20140719000.png)
@@ -41,7 +41,7 @@ tags: ahkcn 历史
 注：上文中所述的几个基础入门教程写的很好，为方便初次接触脚本的朋友，我已将它们转载到本专栏并根据现状进行了更新：
 
 * [让重复工作一键完成]({{ site.url }}/2014/07/31/one-key-for-repeat-tasks.html)
-* [自动化操作轻松入门]({% post_url /_posts/2014-07-31-make-process-automatical %})
+* [自动化操作轻松入门]({{ site.url }}/2014/07/30/make-process-automatical.html)
 * [AHK 快餐店系列索引]({{ site.url }}/2014/07/25/ahk-fast-food-restaurant.html)
 
 ## 翻译人员列表
