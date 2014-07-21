@@ -4,7 +4,7 @@ layout: post
 title: 视频网站瞬间提速（适用于优酷、爱奇艺、搜狐、乐视、土豆等）
 thread: 4
 categories: 即用
-tags: 在线视频 Flash
+tags: 在线视频 Flash 待更新
 ---
 注：原本想直接转载过来就放了，但大家热烈响应出乎意料，看来想偷懒也不行啊。
 
@@ -154,3 +154,36 @@ DisableP2P(mmscfg)
 为什么上传会影响下载速度呢（具体表现是上传速度较大时下载明显卡起来）？http://www.williamlong.info/archives/3304.html
 
 所以解决的方法很简单，通过修改 Flash 配置文件来禁用其 P2P 功能。此操作没有任何副作用（经过我几个月使用的实际测试），效果非常显著（现在非常非常少的时候我看“超​清”会卡）。
+<!--
+原理说明：
+http://www.macromedia.com/support/documentation/cn/flashplayer/help/settings_manager09.html
+
+Flash插件禁止上传方法:
+
+（1）对于调用系统 Flash 的浏览器： ①找到 C:\WINDOWS\system32\Macromed\Flash\mms.cfg 文件，没有则新建 在其中添加一行 RTMFPP2PDisable=1 ②用浏览器打开下面的页面，勾选“对所有用户禁用P2P上行链” http://www.macromedia.com/support/documentation/cn/flashplayer/help/settings_manager09.html “mms.cfg”文件配置说明： RTMFPP2PDisable=1 AutoUpdateDisable=1 WindowlessDisable=1 上面三句依次表示：禁止上传、禁止自动更新、禁止浮动Flash窗口
+
+也可在这个页面直接禁用，或在【控制面板】【Flash Player】【播放】选项卡，选中“阻止所有站点使用对等协助网络”。
+或在浏览器页面中 swf 上右键点击【全局设置】：“阻止所有站点使用对等协助网络”。
+上面都只是对系统中的全局 Flash 设置，不影响内置了 Flash 插件的浏览器，如 Chrome，请看下面的脚本。
+
+最后一个方法，使用下面的脚本。
+
+echo RTMFPP2PDisable=1 >> %windir%\system32\Macromed\Flash\mms.cfg
+
+　　echo RTMFPP2PDisable=1 >> %windir%\syswow64\Macromed\Flash\mms.cfg
+
+　　echo RTMFPP2PDisable=1 >> %windir%\system32\mms.cfg
+
+对于 Chrome
+echo RTMFPP2PDisable=1 >> "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Pepper Data\Shockwave Flash\System\mms.cfg"
+
+对于其他内置 Flash 的浏览器（即不使用系统 Flash），请搜索 mms.cfg
+
+三个文件，或手动指定其他浏览器内置 Flash 使用的 mms.cfg 文件：
+函数：FileRead mms.cfg，检查其中是否含 RTMFPP2PDisable=0 行，若无，则 FileAppend
+若有，则把 RTMFPP2PDisable=0 替换为 RTMFPP2PDisable=1
+
+
+网络速率的参数除了一般的上传下载以外，还有一个叫响应时间
+响应时间决定延迟大小。
+-->
