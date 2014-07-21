@@ -17,7 +17,7 @@ tags: ahkcn 历史
 国内用户接触到 AutoHotkey 最早大概在 2005 年（早期开发历史可参阅维基百科 [AutoHotkey 条目](http://zh.wikipedia.org/wiki/AutoHotkey)），当时网上能找到零星的中文资料。现在记忆犹新的是 yonken 的博客（记忆中最早在 blogcn.com，之后辗转多处），里面发了许多译自帮助的内容，也写了不少即用型脚本。此后，还写了[自动化操作轻松入门系列]({{ site.url }}/2014/07/30/make-processes-automatically.html)（原网址已不可考）并把已翻译的内容打包成中文帮助（即 1.0.36.06 版本，现在仍可从 [AutoHotkey 中文化项目](http://sourceforge.net/projects/ahkcn/)下载我收藏的版本）。若说国内推广，他当推第一人。可惜，他的博客历经变迁，多数文章现在都看不到了。
 
 2006 年末，xbeta 写了[《AutoHotkey 0级入门教程:让重复工作一键完成》](http://blog.sina.com.cn/s/blog_46dac66f010005g7.html)，被转载到太平洋电脑网（此时更名为[《演绎段氏"凌波微步" AutoHotkey 0级入门教程》](http://arch.pconline.com.cn//pcedu/soft/gj/others/0609/872613.html)）。此后几年在其新浪博客中写了许多实际应用文章开始着力推广 AutoHotkey（请参阅[搜索“AutoHotkey”_善用佳软](http://blog.sina.com.cn/search/search.php?uid=1188742767&keyword=autohotkey)）及在其独立博客中的更多文章（参阅：<http://xbeta.info/tag/autohotkey>）。
-![2014-07-19 112635.png]({{ site.url }}/assets/images/2014-07-19 112635.png)
+![“AutoHotkey”搜索趋势对比图]({{ site.url }}/assets/images/20140719000.png)
 从上图中可以看到，AutoHotkey 在国内的兴起大致在 2007 年末。也是在这时，sfufoet 在煎蛋开始了 [AHK 快餐店系列](http://jandan.net/2007/10/21/ahk-fast-food-restaurant-advance-notice.html)教程，之后转到小众软件[继续更新](http://www.appinn.com/ahk-fast-food-restaurant/)，并在 2008 年末打包了连载的 AHK 快餐店教程（含所有脚本）及中文帮助而出了个 [AHK 懒人包](http://www.appinn.com/autohotkey-all-in-one/)，极大方便了 AutoHotkey 初学者上手（该教程至今我仍推荐初学者使用）。
 
 2008 年 2 月，helfee [创建了中文论坛](http://ahk.5d6d.com/thread-941-1-1.html)（ahk.5d6d.com，目前打开将被重定向），他与 BLooM2、天堂之门等论坛管理在初期做了大量建设性工作，至此中文爱好者终于有一个集中讨论交流 AutoHotkey 的地方了。4 月，论坛[开始组织翻译](http://ahk.5d6d.com/thread-4-1-1.html)大家需求最迫切的中文帮助（在 [AutoHotkey 中文化项目](http://sourceforge.net/projects/ahkcn/)中可以下载论坛翻译的最终版）。
