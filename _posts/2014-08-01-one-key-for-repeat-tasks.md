@@ -56,7 +56,7 @@ AutoHotkey 的帮助文件，写得很细。有耐心的就认真拜读，想成
 
 如下图，打开你的文本编辑器（记事本、或 gVIM），新建一个文件，把下两行内容复制进去。
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 msgbox, 这是我的第一个 AutoHotkey 脚本 `n 我既关注效率，也尊重版权
 run, http://xbeta.info/autohotkey-guide.htm
 {% endhighlight %}
@@ -86,7 +86,7 @@ run, http://xbeta.info/autohotkey-guide.htm
 
 将下面的语句保存为 new2.ahk （提醒 UTF-8 with BOM 编码）：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ::test1:: 善用佳软。ひらがな 平仮名；カタカナ 片仮名。Korean/한국어/조선말。
 {% endhighlight %}
 
@@ -100,7 +100,7 @@ run, http://xbeta.info/autohotkey-guide.htm
 
 将下面的语句保存为 new3.ahk （提醒 UTF-8 编码）：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 #1::
 run, http://mail.163.com
 WinWaitActive, 网易 ; 等待网页加载成功（至少标题显示出来）
@@ -114,7 +114,7 @@ return
 
 注意：本例实际执行中有可能不成功。因为邮箱登录页面可能已经保存了用户名，甚至也保存了密码，导致初始输入焦点不准确。笔者真实在用的例子是登录 Lotus Notes 客户端，并输入密码。代码如下：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 #n::
 run, "c:\Program Files\lotus\notes\nlnotes.exe"
 winwait,,输入口令

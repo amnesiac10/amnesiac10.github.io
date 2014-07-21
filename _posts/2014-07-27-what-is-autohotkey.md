@@ -17,7 +17,7 @@ tags:
 
 先看看维基百科条目[编写本文时 AutoHotkey 条目内容](https://zh.wikipedia.org/w/index.php?title=AutoHotkey&oldid=31340104)（本文发表后该条目被重写，条目当前内容请看 [AutoHotkey](http://zh.wikipedia.org/wiki/AutoHotkey)）， 可以看到它能做的事情还是蛮多的，但从**常用功能**中我们可以看到“按键”（包括“热键”等）出现的频率很高，同时提到另一个常用功能“扩展缩写”。没错，这里总结了它所擅长的事情：热键和热字串。这两者对用户而言实际是操作的方式，而不是功能，功能则是根据我们的需求而定。没有脚本我也能做这些操作，为什么还要用脚本呢？先看下面这个简单的脚本：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 WheelUp::Send {Volume_Up}     ; 向上转动（远离您的方向）鼠标滚轮增加音量。
 WheelDown::Send {Volume_Down} ; 向下转动鼠标滚轮减小音量。
 {% endhighlight %}

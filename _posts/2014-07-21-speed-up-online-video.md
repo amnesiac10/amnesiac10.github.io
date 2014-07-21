@@ -46,7 +46,7 @@ registerSWFObject( swfo, "p2pprivacy" );
 
 
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 if not A_IsAdmin
 {
   Run *RunAs "%A_ScriptFullPath%"  ; 需要 v1.0.92.01+
@@ -98,7 +98,7 @@ ExitApp
 ## 评论中[芍青的脚本](http://zhuanlan.zhihu.com/autohotkey/19794762#comment-57490745)
 经过简单的风格整理：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 f := {SilentAutoUpdateEnable:0, AutoUpdateDisable:0, ProtectedMode:0, RTMFPP2PDisable:1}
 B := FileRead(L := "C:\Windows\" (A_Is64bitOS ? "SysWOW64" : "system32") "\Macromed\Flash\mms.cfg")
 Loop, parse, B, `n, `t `r
@@ -113,7 +113,7 @@ FileAppend(Trim(A, " `n"), L, 1, "")
 
 ## amnesiac 的改进脚本
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ; Flash 配置文件的列表，集中在一起方便扩展。如果使用其他内置 Flash 的浏览器，请将其包含的 mms.cfg 文件（含路径）追加到这个变量中
 MMSFileList =
 (

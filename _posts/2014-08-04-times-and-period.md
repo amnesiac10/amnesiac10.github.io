@@ -17,7 +17,7 @@ tags:
 
 在这个示例中（来自[帮助](http://ahkcn.github.io/docs/)并做适当修改），使用了两个判断条件：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 intInterval := 500 ; 若两次连击在这个时间间隔中，则视为双击。
 ~RControl::
 if (A_PriorHotkey <> "~RControl" or A_TimeSincePriorHotkey > intInterval)
@@ -38,7 +38,7 @@ return
 
 既然双击可行，那么三击或更多呢？在实际中不常用，不过思考还是挺有趣的。下面是多次连击的实用例子，设计的很精巧：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 CapsLock::
 if (A_ThisHotkey <> A_PriorHotkey)
     return
@@ -61,7 +61,7 @@ Return
 
 注意到了吗？其中计时器的周期是负的。此外，这里直接屏蔽了系统原来的功能，参照前面双击的例子可以很容易恢复。再看帮助中一个例子（做了修改）：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 #c::
 if (intCount > 0) ; SetTimer 已经启动，这里记录键击。
 {
@@ -95,7 +95,7 @@ return
 
 前两个例子尽管看起来长一些，实际上很好理解，但下面这个虽短却需好好思考及实践才会有点头绪：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 #MaxThreadsPerHotkey 5
 #Space::  ; Win+Space 热键.
 #MaxThreadsPerHotkey 1
@@ -120,7 +120,7 @@ Return
 
 根据按住按键的时长执行不同的操作，可能实际中比上一种用法更少见。
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 Esc:: ; 在按下时触发。
 If StartTime
     return
@@ -143,7 +143,7 @@ return
 
 代码中已经自行解释了，这里补充一点是触发的时间点，在写普通热键时经常需要考虑到这点（主要是修饰键和普通键的具体表现的区别）。另外，Esc:: 热键写成这样为什么不行呢？
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 Esc::StartTime := A_TickCount
 {% endhighlight %}
 
@@ -152,7 +152,7 @@ Esc::StartTime := A_TickCount
 ![2014-07-01 105116.png]({{ site.url }}/assets/images/19661-f4ff31991f6bd846.png)
 因此，编写一个脚本时如果运行结果和预期不一致，调试是找出问题很好的方法。在实际中，有时可能用 [Hotkey 命令](http://ahkcn.github.io/docs/commands/Hotkey.htm)效果较好：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 Esc:: ; 在按下时触发。
 If StartTime
     return

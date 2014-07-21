@@ -12,7 +12,7 @@ tags:
 
 ### 修饰键符号
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 #n::WinMinimize, A ; 最小化活动窗口。
 {% endhighlight %}
 
@@ -20,7 +20,7 @@ tags:
 
 这四个修饰键本身还可组合，可增加舒适按键组合的数量。对于目标操作，一般建议有某种暗示含义的行为，如 Windows 键，我们会想起什么？除了系统功能，一般会想到窗口了，而在窗口的系统菜单中，n 就是那个快捷键，上面这个例子记忆成本（覆盖系统原热键时建议考虑这点）接近于零。
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ^+n::Run, Notepad.exe  ; 打开记事本。
 {% endhighlight %}
 
@@ -30,13 +30,13 @@ tags:
 
 仅有四个修饰键是不够的：一方面很多修饰键组合已被利用，第二有些组合用起来也麻烦，如包含了三个修饰键的组合键。不过 AutoHotkey 把修饰键的范围从这四个扩大到了几乎每个按键甚至鼠标和游戏杆按钮（普通按键或鼠标按钮作为修饰键使用时会自动使用钩子，可从 [ListHotkeys](http://ahkcn.github.io/docs/commands/ListHotkeys.htm) 界面中观察验证）：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 a & k::MsgBox 您在按住 a 时按下了 k 键。
 {% endhighlight %}
 
 这里字母 a 成了修饰键，这个组合相对而言还是较为方便的。不过成为修饰键后单独按 a 则不再会输入 a 了，怎么办？
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 a::Send, a ; 发送模拟按键 a。
 {% endhighlight %}
 
@@ -46,7 +46,7 @@ a::Send, a ; 发送模拟按键 a。
 
 在实际情况中，通常需要对热键进行某种限制，例如上面的热键 a，由于发送的模拟按键 a 还会触发这个热键，这样后果可能很严重。为了避免这种情况：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 $a::Send, a ; 发送模拟按键 a。
 {% endhighlight %}
 
@@ -54,19 +54,19 @@ $ 表示使用钩子创建这个热键，这样避免了循环激发（上面的
 
 ## 序列键
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ::btw::by the way ; 输入 btw 后替换为 by the way。
 {% endhighlight %}
 
 依次按下 b、t、w 三个按键后，输入了 `by the way`。当然，实际上还需要个终止符（如空格）才行，不过也可避免：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 :*:r@::rhong@somewhere.com ; 输入 r@ 后自动替换为邮件地址。
 {% endhighlight %}
 
 这里的选项在第一对引号的两个中间，更多选项请参阅帮助中[热字串和自动替换部分](http://ahkcn.github.io/docs/Hotstrings.htm#Options)。这里的热字串实现了自动替换，实际中可用于扩展缩写、纠正拼写错误等。不过，热字串也可以执行命令：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ::btw::
 MsgBox, 您刚刚输入了“btw”。
 return

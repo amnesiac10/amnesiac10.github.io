@@ -298,7 +298,7 @@ AutoHotkey 热字串的替换依据不同的需求会有不同的选项，用户
 
 上面的例子每个关键字只能替换一列文本，若想输出多列文本应该要如何设置呢？其实 AutoHotkey 提供了简单的语法来达成这个功能：只要用各占一列的左右括号把多列文本夹起来就可以了。
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ::long1::
 (
   Dear xxx,
@@ -392,7 +392,7 @@ MsgBox 是 Message Box 的意思，弹出显示消息对话窗</td>
 
 多列式的热字串是用括号夹住文本，同样地热键也能执行多列命令：每个命令必须各占一行，开头的空白内缩只是为了阅读便利而已，没有空白或空白的数目多寡皆不会影响命令的执行，最后必须以 return 结束：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ; 一个〔Ctrl+Alt+F〕按键先后启动 FireFox 和记事本
 ^!F::
 Run c:\program files\mozilla firefox2\firefox.exe
@@ -411,7 +411,7 @@ A_Desktop | 用户桌面文件夹 | C:\Documents and Settings\用户\桌面
 
 知道变量后再回头修改指令，在使用变量时其前后要夹上百分号 %。当然了，如果你的环境是固定的，直接写成固定文件夹也不会有问题，反而还更快速呢。下面是使用通用方式的写法：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ; 一个〔Ctrl+Alt+F〕按键先后启动 FireFox 和记事本
 ^!F::
 Run %A_ProgramFiles%\mozilla firefox2\firefox.exe
@@ -464,7 +464,7 @@ return</pre>
 
 接着我列出几个我常用的按键设置当做大家使用的启始参考范例：
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ; 按 Win+G 送出 @gmail.com 字串
 #g::Send @gmail.com
 
@@ -497,7 +497,7 @@ return
 
 Word 有提供把特殊符号指定给按键的用法，但只能在 Word 里使用，如果通过 AutoHotkey 设置，那么不管你操作的是那一种程序，统统都能适用。下面我们用一些热键设置来方便输入中文的标点符号。
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ; 输入 ’addr 与触发符号后替换成地址。
 :: 'addr::
 current_clipboard = %Clipboard% ; 先把剪贴板目前内容存入 current_clipboard 变量
@@ -547,7 +547,7 @@ return
 
 接着我们再设置几个中文括号，先把要放在括号里的文本选取好，再按指定的按键就能把被选取文本夹在括号里。由于这些按键的处理指令大同小异，只有括号的符号不同而已，因此我们可以把指令集中到一个函数（send_bracket）里。
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ![::
 current_clipboard = %Clipboard% ; 把原有剪贴板内容存起来　　　
 Clipboard = ; 把剪贴板清空
@@ -600,7 +600,7 @@ AutoHotkey_L 出现后，实现了对 Unicode 的全面支持，这种情况成�
 * send 指令以 SendInput 取代，输出速度提升不少
 
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ; 传回选取文本的内容
 getSelectedText() {
   clpb_saved = %ClipboardAll% ; save clipboard
@@ -694,7 +694,7 @@ return
 3. 按自订的一个按键，例如〔Alt+G〕
 
 
-{% highlight ahk linenos %}
+{% highlight ahk %}
 ; 选取文本后按〔Alt+G〕执行 Google 搜寻
 !g::
 current_clipboard = %Clipboard% ; 把目前的剪贴板内容存起来供后面还原
