@@ -4,7 +4,7 @@ layout: post
 title: AHK快餐店系列索引
 thread: 9
 categories: 指南
-tags:
+tags: 零基础教程
 ---
 转者按：本文属于**零基础入门**专题教程，开始[发表于煎蛋](http://jandan.net/2007/10/21/ahk-fast-food-restaurant-advance-notice.html)，后[至小众软件继续更新](http://www.appinn.com/ahk-fast-food-restaurant/)，作者 sfufoet。本专题选取一些通俗易懂的基础入门教程，经适当整理（以反映目前 AutoHotkey 现状）后集中发表，以方便初次接触脚本的朋友入门（帮助中的[初学者向导](http://ahkcn.github.io/docs/Tutorial.htm)也是很好的入门教程）。注：本系列教程语言诙谐幽默，更多侧重针对实际问题的解决能力。本文只是这一系列教程的索引，详细内容请点击链接继续阅读，由于这些内容时间跨度大且 AutoHotkey 持续更新，若执行时遇到问题请留言。
 
