@@ -13,7 +13,7 @@ redcarpet:
       #    - autolink
       #    - strikethrough
       #    - fenced_code_blocks
-
+safe: false
 # 个人信息
 qq: 
 email: rhong.fu@gmail.com
