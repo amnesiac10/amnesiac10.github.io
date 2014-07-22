@@ -4,7 +4,7 @@ layout: post
 title: MacroCreator学习资源
 thread: 6
 categories: 工具
-tags: 宏 MacroCreator
+tags: 宏录制 MacroCreator
 ---
 [宏录制和自动化脚本创建]({{ site.url }}/2014/07/23/macro-recording.html)说明了需要宏录制/回放工具的原因及 Pulover's Macro Creator 简单介绍，本文提供一些它的学习资源方便大家。
 注：Macro Creator 中的简体中文翻译粗糙，1 月份  Pulover（该录制工具作者）在收到我翻译的中文语言文件时回复下次更新时加入，但那时至今尚未更新过，且我翻译的中文帮助也未打包到官方下载中，请大家暂到[此处](http://t.cn/RviKval)下载。
