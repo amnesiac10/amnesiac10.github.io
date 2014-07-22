@@ -49,7 +49,7 @@ Run 命令或者函数用来运行外部可执行文件，AHK还可利用它来�
 AHK：`Run, 目标文件 [, 工作目录, Max|Min|Hide|UseErrorLevel, 输出PID变量]`  
 AU3：`Run ( "文件名" [, "工作目录" [, 标志]] )`  
 
-【示例 2.1.1 】
+【示例 2.1.1 】  
 AHK：`Run, Notepad.exe`  
 AU3：`Run("Notepad.exe")`  
 上面的示例中都没有给出程序“Notepad.exe”的路径，为什么仍能执行？这是因为它们都会自动在脚本所在目录下搜寻目标文件，如有则运行，否则就到系统文件夹（%​PATH%）中搜寻。
