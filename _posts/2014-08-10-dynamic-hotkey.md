@@ -1,7 +1,7 @@
 ---
 date: 2014-08-10 10:16:23+08:00
 layout: post
-title: 动态热键
+title: 让热键动起来
 thread: 
 categories: 热键
 tags: hotkey input A_PriorKey 
@@ -37,7 +37,7 @@ MyLabel_3:
 MsgBox, 您按下了 %A_ThisHotkey% 热键（%A_ThisLabel%）。
 Return
 
-; 上面的第三个热键需要该指令才起作用（注：这里的 `||` 替换为 `or` 无效）：
+; 上面的第三个热键需要该指令才起作用（注：这里的“||”替换为“or”无效）：
 #If, WinActive("ahk_class Notepad") || WinActive("ahk_class WordPadClass")
 {% endhighlight %}
 
