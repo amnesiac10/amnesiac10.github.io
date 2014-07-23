@@ -12,14 +12,14 @@ tags:
 ## AutoHotkey 的高度定制功能，让你成为效率高手
 
 如果你分析每天操作电脑时所重复执行的动作——相同的网址、相同的电子信箱、相同的文本输入等等，你会惊讶的发现重复频率之高令人咋舌。如果你想从诸多的重复动作里解脱而出，并且能有效提升操作电脑的效率，那么 AutoHotkey 是你不能错过的工具，善用 AutoHotkey 将让你轻而易举的成为效率高手。
-![AutoHotkey_logo.gif]({{ site.url }}/assets/images/19661-856ab045663259d4.gif)
-软件名称： AutoHotkey
-软件版本：1.1.15.01
-软件大小：2+MB
-软件授权：免费开源
-适用平台：Windows
-语言接口：英文
-官方网站：http://ahkscript.org/
+![AutoHotkey_logo]({{ site.url }}/assets/images/AutoHotkey_logo.gif)
+软件名称： AutoHotkey  
+软件版本：1.1.15.01  
+软件大小：2+MB  
+软件授权：免费开源  
+适用平台：Windows  
+语言接口：英文  
+官方网站：http://ahkscript.org/  
 下载地址：[点击下载](http://ahkscript.org/download/ahk-install.exe)
 
 ## AutoHotkey：键盘与鼠标工具
@@ -43,9 +43,9 @@ AutoHotkey 的基本功能介绍完毕，以下进入主题。首先说明 AutoH
 ## AutoHotkey 下载与安装
 
 3. 使用 IE 或 FireFox 等浏览器进入[下载页](http://ahkscript.org/download/)，点击「Installer」开始下载，当「文件下载」对话盒出现后，选取你常用的工具文件夹，把文件存入此文件夹。（注：该安装包已包含了后面几个链接中的文件，那些链接适合老用户。）在页面下方还有前往中文帮助的下载链接。
-![2014-07-07 163635.png]({{ site.url }}/assets/images/19661-14fe1cc1dc28acdc.png)
+![AutoHotkey 下载页面]({{ site.url }}/assets/images/20140802000.png)
 3. 下载后的「AutoHotkey111501_Install.exe」就是安装执行档，请双击此文件以执行安装步骤（若已安装过旧版本，则会提示直接更新或自定义更新）。
-![2014-07-07 162219.png]({{ site.url }}/assets/images/19661-b924b015d433cb89.png)
+![AutoHotkey 安装界面1]({{ site.url }}/assets/images/20140801000.png)
  * 典型安装：使用默认选项安装到默认位置中，建议新用户选择，之后请直接跳到第六步
  * 自定义安装：可在后续对话框中选择各选项、安装位置等，适合老用户，点击后进入下一页
  * 你也可以把它装到 USB 随身碟里以增进可携性，即点击右下角“extract to...”并指定目标目录直接提取压缩文件。
@@ -53,13 +53,13 @@ AutoHotkey 的基本功能介绍完毕，以下进入主题。首先说明 AutoH
  * Unicode 32-bit：没有特殊情况都推荐使用。
  * Unicode 64-bit：在 64 位系统中性能更强，仅在 64 位系统中安装时才会出现。
  * ANSI 32-bit：与某些旧脚本（主要指 AutoHotkey Basic）的兼容性更好。
-![2014-07-07 162228.png]({{ site.url }}/assets/images/19661-9fdd54b5309b8d90.png)
+![AutoHotkey 安装界面2]({{ site.url }}/assets/images/20140802002.png)
 3. 指定安装的文件夹，缺省是「C:\Program Files\AutoHotkey」，还可以选择不创建开始菜单中的快捷方式，最后按〔Next〕。
-![2014-07-07 162234.png]({{ site.url }}/assets/images/19661-009898e012ec233c.png)
+![AutoHotkey 安装界面3]({{ site.url }}/assets/images/20140802003.png)
 3. 接着选取要安装的类型，如果想安装脚本编译器的话，则保持【Install script compiler】的勾选状态；想启动 .ahk 文件的拖拉功能的话，把【Enable drag & drop】选项勾选起来，最后按〔Install〕。
-![2014-07-07 162244.png]({{ site.url }}/assets/images/19661-95b3d8fd1499bc45.png)
+![AutoHotkey 安装界面4]({{ site.url }}/assets/images/20140802004.png)
 3. 文件解压缩并复制后即告全部安装结束。此时可以打开帮助文档或看看本版本的更新内容或运行 AutoHotkey，也可以点击“Exit”直接退出。
-![2014-07-07 162250.png]({{ site.url }}/assets/images/19661-29567c5d17115712.png)
+![AutoHotkey 安装界面5]({{ site.url }}/assets/images/20140801001.png)
 
 AutoHotkey 安装完成后不必重新启动电脑，尔后扩展名 .ahk 会自动关联到 AutoHotkey.exe，只要双击扩展名为 .ahk 的文件就能启动 AutoHotkey 来读取该文件的内容，再依脚本档内容来设置键盘与鼠标。AutoHotkey 安装文件夹里有几个重要文件要请大家注意：
 
@@ -75,7 +75,7 @@ Installer.ahk | 安装程序的 ahk 脚本，结构工整、形式优美，可�
 
 ## 由简单的范例开始使用 AutoHotkey 的热字串
 请用【开始→程序集→附属应用程序→记事本】启动记事本（或使用你惯用的文本编辑程序），输入以下内容后保存成 test1.ahk。
-![autohotkey-07.png]({{ site.url }}/assets/images/19661-00bcbacb6b73a5c5.png)
+![编写脚本]({{ site.url }}/assets/images/20140802006.png)
 以上是常用网址与常用电子邮件的几个热字串范例，提示几个重点：
 
 * 每行若以半角分号开头则表示此列是说明注解，不会被执行
@@ -106,7 +106,7 @@ w! | Enter | http://www.wretch.cc
 
 1. 在右下角 System Tray 找到 AutoHotkey 的 H 图标后，按右键选【Exit】以结束目前的 AutoHotkey，再双击修改后的 test1.ahk 以重新启动 AutoHotkey
 1. 第二个是较简便的方法，一样开启 System Tray 的 H 图标后，按右键选【Reload This Script】即可重新读入修改后的脚本指令
-![2014-07-06 094355.png]({{ site.url }}/assets/images/19661-1ae9e7eb3b54b54f.png)
+![从托盘图标重载脚本]({{ site.url }}/assets/images/20140802007.png)
 
 ## 常用的几种热字串范例
 
