@@ -13,10 +13,10 @@ tags: 编码 FileEncoding A_FileEncoding A_IsUnicode
 
 ## 脚本文件编码
 
-首先请阅读帮助中相关内容：[脚本文件代码页](http://ahkcn.sourceforge.net/docs/Scripts.htm#cp)。这里说明了解释器（AutoHotkey.exe）加载脚本时选择编码的优先级顺序：
+首先请阅读帮助中相关内容：[脚本文件代码页](http://ahkcn.github.io/docs/Scripts.htm#cp)。这里说明了解释器（AutoHotkey.exe）加载脚本时选择编码的优先级顺序：
 
 3. 若脚本文件开头为字节顺序标记（BOM），则据其选择相应的编码（UTF-8 BOM 或 UTF-16 BOM）；
-3. 若解释器命令行中包含了 [/CPn](http://ahkcn.sourceforge.net/docs/Scripts.htm#CPn) 选项，则使用 n 指定的编码；
+3. 若解释器命令行中包含了 [/CPn](http://ahkcn.github.io/docs/Scripts.htm#CPn) 选项，则使用 n 指定的编码；
 3. 其他情况下，则使用系统默认代码页（一般简单称为 ANSI 编码）。
 
 一般情况下建议脚本文件使用 ANSI 或 UTF-8 BOM（注意必须加上 BOM）编码，这样一般情况下脚本文件都能正常加载，但下列两种情况中必须使用 UTF-8 BOM 编码，否则脚本加载或执行时会出问题：
@@ -26,7 +26,7 @@ tags: 编码 FileEncoding A_FileEncoding A_IsUnicode
 
 对于简体中文 Windows 系统，默认代码页为 CP936（也可以认为是 GB2312、GBK 或 GB18030），这是种[双字节字符集](http://en.wikipedia.org/wiki/DBCS)（缩写 DBCS，是[多字节字符集](http://msdn.microsoft.com/zh-cn/library/4bb3e64h.aspx)即 MBCS 的一种，与单字节字符集 SBCS 相对；典型的多字节字符集如汉字，而单字节字符集常见于欧洲语言）。对于上面的第二种情况，如果脚本只包含 ANSI 字符，那么应该也能正常执行，不过中文用户脚本中不包含汉字的可能性有多大呢？
 
-注：AutoHotkey Basic 默认脚本编码为 ANSI；对于 AutoHotkey_L，在 [1.1.08.00 版本](http://ahkcn.sourceforge.net/docs/AHKL_ChangeLog.htm#v1.1.08.00)之前，ANSI 构建（build）默认脚本编码为 ANSI，但 Unicode 构建默认编码为 UTF-8，为了减少混乱，该版本之后脚本默认编码都使用 ANSI（所以 UTF-8 编码的脚本必须包含 BOM 头部才能被正确识别）。
+注：AutoHotkey Basic 默认脚本编码为 ANSI；对于 AutoHotkey_L，在 [1.1.08.00 版本](http://ahkcn.github.io/docs/AHKL_ChangeLog.htm#v1.1.08.00)之前，ANSI 构建（build）默认脚本编码为 ANSI，但 Unicode 构建默认编码为 UTF-8，为了减少混乱，该版本之后脚本默认编码都使用 ANSI（所以 UTF-8 编码的脚本必须包含 BOM 头部才能被正确识别）。
 
 [SciTE4AutoHotkey](http://fincs.ahk4.net/scite4ahk/) 中在工具中设置默认代码页为 UTF-8 时创建的 UTF-8 脚本不含 BOM：
 ![SciTE 设置对话框]({{ site.url }}/assets/images/20140811000.png)
@@ -51,7 +51,7 @@ tags: 编码 FileEncoding A_FileEncoding A_IsUnicode
 
 IniRead 和 IniWrite 总是使用 UTF-16 或系统默认代码页，即除了 UTF-16 编码（通过 BOM 判断）外，其他所有情况都被视为系统默认编码。
 
-原理： [IniRead](http://ahkcn.sourceforge.net/docs/commands/IniRead.htm) 和 [IniWrite](http://ahkcn.sourceforge.net/docs/commands/IniWrite.htm) 依靠外部函数 GetPrivateProfileString 和 WritePrivateProfileString 来读取和写入值，这些函数仅支持 UTF-16 编码的 Unicode 文件，其他所有文件都被认为使用系统默认代码页。
+原理： [IniRead](http://ahkcn.github.io/docs/commands/IniRead.htm) 和 [IniWrite](http://ahkcn.github.io/docs/commands/IniWrite.htm) 依靠外部函数 GetPrivateProfileString 和 WritePrivateProfileString 来读取和写入值，这些函数仅支持 UTF-16 编码的 Unicode 文件，其他所有文件都被认为使用系统默认代码页。
 
 对于 IniRead 支持的 UTF-16 编码，需注意下面几点：
 
@@ -68,7 +68,9 @@ IniRead 和 IniWrite 总是使用 UTF-16 或系统默认代码页，即除了 UT
 
 这部分属于进阶内容，相对于前面的内容有较高难度，多实践是理解的关键。
 
-字符串编码是指内存中存储字符时使用的编码，这种编码被称为可执行程序的原生编码，相关帮助内容请参阅 [Unicode 与 ANSI 两种构建的比较](http://ahkcn.sourceforge.net/docs/Compat.htm#Format)。简而言之，字符串编码与构建有关，Unicode 构建使用 UTF-16 LE 编码，而 ANSI 构建使用系统默认编码，AutoHotkey Basic 与 ANSI 构建相同。各分支比较的相关说明请参阅[选择哪个分支？]({{ site.url }}/2014/08/02/choose-versions.html)。
+字符串编码是指内存中存储字符时使用的编码，这种编码被称为可执行程序的原生编码，相关帮助内容请参阅 [Unicode 与 ANSI 两种构建的比较](http://ahkcn.github.io/docs/Compat.htm#Format)。简而言之，字符串编码与构建有关，Unicode 构建使用 UTF-16 LE 编码，而 ANSI 构建使用系统默认编码，AutoHotkey Basic 与 ANSI 构建相同。各分支比较的相关说明请参阅[选择哪个分支？]({{ site.url }}/2014/08/02/choose-versions.html)。
+
+### 编码转换
 
 通常我们无需关心字符串编码，例如赋值或显示时如果需要转换都会自动进行， 但通过一些高级方法操作字符串则必须考虑，例如在 DllCall、PostMessage/SendMessage、NumPut/NumGet、Capacity 和 StrPut/StrGet 中处理字符串时。
 
