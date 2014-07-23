@@ -1,8 +1,8 @@
 ---
 date: 2014-08-10 10:16:23+08:00
 layout: post
-title: 伪数组与关联数组
-thread: 24
+title: 动态热键
+thread: 
 categories: 热键
 tags: hotkey input A_PriorKey 
 ---
@@ -38,7 +38,7 @@ MsgBox, 您按下了 %A_ThisHotkey% 热键（%A_ThisLabel%）。
 Return
 
 ; 上面的第三个热键需要该指令才起作用（注：这里的 `||` 替换为 `or` 无效）：
-\#If, WinActive("ahk_class Notepad") || WinActive("ahk_class WordPadClass")
+#If, WinActive("ahk_class Notepad") || WinActive("ahk_class WordPadClass")
 {% endhighlight %}
 
 下面进行简单的分析：
@@ -70,7 +70,7 @@ Hotkey, If, WinActive("ahk_class Notepad") || WinActive("ahk_class WordPadClass"
 尽管这里的条件仍与窗口有关，不过实际上可以任意表达式，只需满足存在相应的 #If 指令且它们包含的表达式完全一致。
 
 {% highlight ahk %}
-\#If, WinActive("ahk_class Notepad") || WinActive("ahk_class WordPadClass")
+#If, WinActive("ahk_class Notepad") || WinActive("ahk_class WordPadClass")
 {% endhighlight %}
 
 原本 #If 指令是与位置有关，但由于这个脚本中没有双冒号热键和热字串，所以这里放在什么位置关系不大。
@@ -172,8 +172,8 @@ Loop
 上面没有提到，实际上[使用 Input 是有局限性的](http://ahk8.com/thread-2133.html)，如不支持鼠标按键，而通过 [A_PriorKey](http://ahkcn.github.io/docs/Variables.htm#PriorKey) 不仅能检测到按键，还能检测到按钮（需要安装钩子）：
 
 {% highlight ahk %}
-\#InstallKeybdHook
-\#InstallMouseHook
+#InstallKeybdHook
+#InstallMouseHook
 Loop {
     ToolTip % A_PriorKey
     Sleep 100
