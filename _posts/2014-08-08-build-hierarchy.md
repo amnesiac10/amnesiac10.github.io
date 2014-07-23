@@ -36,7 +36,7 @@ tags:
 3. Run/RunWait  
 不会批处理不要紧，适当了解系统命令行中的命令有些事情能事半功倍，有兴趣也可了解第三方工具，如 [NirCmd](http://nirsoft.net/utils/nircmd.html)（命令行中少见的瑞士军刀）等。注：这两个命令运行图形程序也是一样的，不过这对于系统程序或第三方工具都较简单，应该基础部分就会了。
 3. COM 系列函数  
-会使用系统或第三方 COM 对象，如 Office 系列组件、大漠插件等。要了解系统和第三方中的常用 COM，请参阅 [COM Object Reference](http://www.autohotkey.com/board/topic/56987-com-object-reference-autohotkey-v11/)（含简介和演示代码）。
+会使用系统或第三方 COM 对象，如 Office 系列组件、大漠插件等。要了解系统和第三方中的常用 COM，请参阅 [COM Object Reference](http://www.autohotkey.com/board/topic/56987-com-object-reference-autohotkey-v11/)（含功能简介和演示代码）。
 3. PostMessage/SendMessage/OnMessage()/RegisterCallback()  
 消息，会查询系统或第三方工具的消息相关文档并用于脚本中。
 3. WMI  
