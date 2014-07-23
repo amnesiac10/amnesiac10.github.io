@@ -4,7 +4,7 @@ layout: post
 title: 让热键动起来
 thread: 
 categories: 热键
-tags: hotkey input A_PriorKey 
+tags: hotkey input A_PriorKey 待整理
 ---
 
 引子：有些文章只看它的标题，您就看不出它的内容，则很可能错过它的精彩，本文即是其中一例。
