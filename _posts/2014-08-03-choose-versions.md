@@ -4,10 +4,10 @@ layout: post
 title: 选择哪个分支？
 thread: 17
 categories: 指南
-tags:
+tags: build 版本
 ---
 对于绝大多数用户这个问题的答案都应该是 AutoHotkey_L，那么这个问题还是问题吗？对于新人我还是有必要简要介绍它们（这是他们的主要困惑之一），以便对这些名称及它们的含义有个清晰的认识，同时明白自己选择的原因（顺便也了解些典故）。
-![](http://ww2.sinaimg.cn/mw690/6ef7171bgw1eh4n4soupoj20go0bp75a.jpg)
+![AutoHotkey 各分支演进图]({{ site.url }}/assets/images/20140803000.png)
 图 AutoHotkey 的历史和当前分支一览（[来源](http://maul-esel.github.io/ahkbook/en/images/versions.png)）
 
 ## AutoHotkey_L（首选）
@@ -52,8 +52,6 @@ ANSI 32-bit 的兼容性主要指运行为 AutoHotkey Basic 编写的脚本而�
 注：若未特别说明，以后本专栏中的代码的测试版本均为 AutoHotkey_L Unicode 32-bit。一般而言，AutoHotkey_L 及其他基于 AutoHotkey_L 分支的版本（如 AutoHotkey_H）应该能正常运行这些代码。
 
 ## AutoHotkey v2（不推荐）
-
-注：这部分内容之前已发到 [AutoHotkey 中文用户邮件列表](https://lists.sourceforge.net/lists/listinfo/ahkcn-user)，放到这里时适当调整了细节。
 
 [AutoHotkey v2](http://ahkscript.org/v2/) 由 Lexikos 根据 Chris Mallett（AutoHotkey Basic 作者）对 AutoHotkey 未来的计划基于 AutoHotkey_L 代码开发，目前仍在测试过程中，AutoHotkey v2 只有 Unicode 构建（含 32 和 64 位）。目前在开发过程中的许多新特性都会合并到 AutoHotkey_L 中。
 
