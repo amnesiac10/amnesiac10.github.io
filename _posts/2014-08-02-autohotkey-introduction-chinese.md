@@ -46,13 +46,17 @@ AutoHotkey 的基本功能介绍完毕，以下进入主题。首先说明 AutoH
 ![AutoHotkey 下载页面]({{ site.url }}/assets/images/20140802000.png)
 3. 下载后的「AutoHotkey111501_Install.exe」就是安装执行档，请双击此文件以执行安装步骤（若已安装过旧版本，则会提示直接更新或自定义更新）。
 ![AutoHotkey 安装界面1]({{ site.url }}/assets/images/20140801000.png)
+
  * 典型安装：使用默认选项安装到默认位置中，建议新用户选择，之后请直接跳到第六步
  * 自定义安装：可在后续对话框中选择各选项、安装位置等，适合老用户，点击后进入下一页
  * 你也可以把它装到 USB 随身碟里以增进可携性，即点击右下角“extract to...”并指定目标目录直接提取压缩文件。
+
 3. 构建选择：
+
  * Unicode 32-bit：没有特殊情况都推荐使用。
  * Unicode 64-bit：在 64 位系统中性能更强，仅在 64 位系统中安装时才会出现。
  * ANSI 32-bit：与某些旧脚本（主要指 AutoHotkey Basic）的兼容性更好。
+
 ![AutoHotkey 安装界面2]({{ site.url }}/assets/images/20140802002.png)
 3. 指定安装的文件夹，缺省是「C:\Program Files\AutoHotkey」，还可以选择不创建开始菜单中的快捷方式，最后按〔Next〕。
 ![AutoHotkey 安装界面3]({{ site.url }}/assets/images/20140802003.png)
@@ -66,7 +70,7 @@ AutoHotkey 安装完成后不必重新启动电脑，尔后扩展名 .ahk 会自
 文件名称 | 功能说明
 -|-
 AutoHotkey.exe | 用户所选构建的 AutoHotkey 主程序，AutoHotkeyA32.exe 为 ANSI 构建，AutoHotkeyU32.exe 为 Unicode 构建。
-AutoHotkey.chm | 英文帮助，很好的学习参考文档，可[下载中文帮助](http://sourceforge.net/projects/ahkcn/files/latest/download)覆盖。
+AutoHotkey.chm | 英文帮助，很好的学习参考文档，可[下载中文帮助](http://ahkcn.github.io/download/AutoHotkeyHelp_zh-CN.zip)覆盖。
 AU3_Spy.exe | Active Window Info，显示窗口控件信息的小工具，这些信息对高端的脚本撰写很有帮助。
 Compiler\Ahk2Exe.exe 及相关文件 | 从脚本档生成执行档的图形工具，以方便没有安装 AutoHotkey 系统的环境能用执行档直接执行。
 Installer.ahk | 安装程序的 ahk 脚本，结构工整、形式优美，可作为范本学习参考。
