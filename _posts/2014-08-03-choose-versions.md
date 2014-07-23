@@ -4,7 +4,7 @@ layout: post
 title: 选择哪个分支？
 thread: 17
 categories: 指南
-tags: build 版本
+tags: build 版本 历史
 ---
 对于绝大多数用户这个问题的答案都应该是 AutoHotkey_L，那么这个问题还是问题吗？对于新人我还是有必要简要介绍它们（这是他们的主要困惑之一），以便对这些名称及它们的含义有个清晰的认识，同时明白自己选择的原因（顺便也了解些典故）。
 ![AutoHotkey 各分支演进图]({{ site.url }}/assets/images/20140803000.png)

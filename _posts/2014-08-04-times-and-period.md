@@ -4,7 +4,7 @@ layout: post
 title: 热键的次数与时长
 thread: 18
 categories: 热键
-tags:
+tags: 组合键 hotkey
 ---
 在热键方面，AutoHotkey 扩展了很多概念和适用范围，例如平常所说的热键一般指前一篇所说的组合键，但在 ahk 中鼠标键、滚轮或游戏操纵杆按钮都可以作为热键。换句话说，这里介绍的方法都应该根据实际需要灵活应用。（与热键相关的一个概念是加速键，常出现的图形用户界面的元素中加下划线显示并使用 Alt 触发。）
 
@@ -148,8 +148,8 @@ Esc::StartTime := A_TickCount
 {% endhighlight %}
 
 请看下面两图，可以看出长按一个按键时我们可能认为只会发送一次按下事件，但实际上它会发送连续的按下事件，且这些事件都触发了 Esc:: 热键：
-![2014-07-01 105102.png]({{ site.url }}/assets/images/19661-98ef0ae659f7cbbb.png)
-![2014-07-01 105116.png]({{ site.url }}/assets/images/19661-f4ff31991f6bd846.png)
+![按键历史]({{ site.url }}/assets/images/20140804000.png)
+![最近执行的代码行]({{ site.url }}/assets/images/20140804001.png)
 因此，编写一个脚本时如果运行结果和预期不一致，调试是找出问题很好的方法。在实际中，有时可能用 [Hotkey 命令](http://ahkcn.github.io/docs/commands/Hotkey.htm)效果较好：
 
 {% highlight ahk %}
@@ -174,6 +174,4 @@ else if (TimeLength >= 200 and TimeLength < 1500)
 StartTime := ""
 return
 {% endhighlight %}
-
-
 
