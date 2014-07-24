@@ -9,7 +9,7 @@ tags: 热键 Everything TotalCommander
 
 amnesiac 是我的 ID，以后不再赘述。
 
-[Everything](http://www.voidtools.com/) 是个不错的软件，许多人应该都将它列为开机启动的程序之一。它本身提供了热键功能，包括新建窗口、显示窗口和切换窗口，通过切换窗口用热键控制激活和隐藏 Everything 在实际中足够了（如下图），所以下面这个脚本并不很必要。不过如果用类似的方式控制 [Total Commander](http://www.ghisler.com/) 效果就出来了，它较小众这里就不作为例子。
+[Everything](http://www.voidtools.com/) 是个不错的软件，许多人应该都将它列为开机启动的程序之一。它本身提供了热键功能，包括新建窗口、显示窗口和切换窗口，通过切换窗口用热键控制激活和隐藏 Everything 在实际中足够了（如下图），所以下面这个脚本并不很必要。不过如果用类似的方式控制 [Total Commander](http://www.ghisler.com/) 效果就出来了，它较小众所以这里不作为例子。
 ![Everything 选项对话框]({{ site.url }}/assets/images/20140813000.png)
 
 在启动 Everything 后，用一个热键可激活其搜索窗口（当最小化或隐藏时）、隐藏其窗口（当活跃时）。
@@ -60,7 +60,7 @@ return
 * Everything 未启动，则启动并激活；
 * Everything 已启动，则激活窗口；
 
-这里，不论是否已启动都需要激活窗口，所以合并到一起。这里重点说说 EVERYTHING_TASKBAR_NOTIFICATION 这个窗口，怎么来的呢？
+这里，不论是否已启动都需要激活窗口，所以合并到一起。接着重点说说 EVERYTHING_TASKBAR_NOTIFICATION 这个窗口，怎么来的呢？
 ![Microsoft Spy++ 进程列表]({{ site.url }}/assets/images/20140813001.png)
 
 打开 Microsoft Spy++，在 Everything 进程中可以看到这个隐藏窗口（应该在选项中选中**后台运行**才会存在，若不选则关闭时会退出）。

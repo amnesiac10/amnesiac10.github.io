@@ -37,7 +37,7 @@ tags: 窗口 控件 消息
 
 ## Microsoft Spy++
 ![Microsoft Spy++ 界面截图]({{ site.url }}/assets/images/20140722006.png)
-介绍：此工具提取自 Microsoft Visual Studio 2003，由微软开发。可获取窗口、消息、进程、线程的信息。其监视消息的功能曾在[【即用】amnesiac 的 Everything 热键](http://zhuanlan.zhihu.com/autohotkey/19755148)中简要提及。
+介绍：此工具提取自 Microsoft Visual Studio 2003，由微软开发。可获取窗口、消息、进程、线程的信息。其监视消息的功能曾在 [amnesiac 的 Everything 热键](http://amnesiac10.github.io/2014/08/12/my-hotkey-for-everything.html)中简要提及。
 
 ## Spy4Win
 ![Spy4Win 界面截图]({{ site.url }}/assets/images/20140722007.png)

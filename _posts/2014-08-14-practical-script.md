@@ -39,7 +39,7 @@ tags:
 > [Texter](http://www.autohotkey.com/forum/topic17165.html) [在 GUI 中设置热字串]（作者: AdamPash） [简单介绍](http://xbeta.info/texter-ahk.htm)  
 > [验证码识别](http://ahk.5d6d.com/thread-1210-1-1.html) （作者: lskxt）  
 > [ViATc](http://sourceforge.net/p/viatc/home/%E4%B8%BB%E9%A1%B5/) [使用类 VI 模式操作 TC]（作者: linxinhong）  
-> [Appifyer](http://www.autohotkey.com/forum/topic71902.html) [应用程序集成和启动工具](含视频)（作者: sumon）  
+> [Appifyer](http://www.autohotkey.com/forum/topic71902.html) [应用程序集成和启动工具]（含视频）（作者: sumon）  
 > [nDroid](http://www.autohotkey.com/forum/topic3010.html) [快速启动程序的工具]（作者: Rajat）  
 > [林可LINK](http://ahk.5d6d.com/thread-5306-1-1.html) [快捷方式管理及通过热字符启动]（作者: megalove）  
 
