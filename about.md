@@ -19,6 +19,8 @@ comments: no
 
 GitHub : [http://github.com/{{ site.github }}](http://github.com/{{ site.github }})
 
+欢迎捐赠：rhong.fu@gmail.com（支付宝）
+
 ----
 
 
