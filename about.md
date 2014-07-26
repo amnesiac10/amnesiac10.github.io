@@ -19,7 +19,7 @@ comments: no
 
 GitHub : [http://github.com/{{ site.github }}](http://github.com/{{ site.github }})
 
-欢迎捐赠：rhong.fu@gmail.com（支付宝）
+欢迎捐赠（支付宝和 Paypal）：rhong.fu@gmail.com
 
 ----
 

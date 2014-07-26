@@ -11,7 +11,7 @@ tags: If 赋值
 
 ## 从示例开始
 
-有人在论坛中提问（[加不加括号，效果截然不同 • AHKScript](http://ahkscript.org/boards/viewtopic.php?f=27&t=3357)），在帮助文档 ListView 的一个示例中（注：这里只是片段，完整代码请参阅帮助 [ListView 页面](http://ahkcn.sourceforge.net/docs/commands/ListView.htm)）：
+有人在论坛中提问（[加不加括号，效果截然不同 • AHKScript](http://ahkscript.org/boards/viewtopic.php?f=27&t=3357)），在帮助文档 ListView 的一个示例中（注：这里只是片段，完整代码请参阅帮助 [ListView 页面](http://ahkcn.github.io/docs/commands/ListView.htm)）：
 
 {% highlight ahk %}
 GuiContextMenu:

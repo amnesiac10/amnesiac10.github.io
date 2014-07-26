@@ -18,7 +18,7 @@ tags: 窗口 控件 消息
 ## AHK Window Info
 ![AHK Window Info 界面截图1]({{ site.url }}/assets/images/20140722001.png)
 ![AHK Window Info 界面截图2]({{ site.url }}/assets/images/20140722002.png)
-[来源](www.autohotkey.com/forum/topic8976.html)：其中包含了功能介绍。  
+[来源](http://www.autohotkey.com/forum/topic8976.html)：其中包含了功能介绍。  
 特色：使用 AutoHotkey 编写，可学习源码；获取窗口和控件信息功能全面。
 
 ## AHKInfo
