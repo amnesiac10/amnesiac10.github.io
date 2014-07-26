@@ -2,7 +2,6 @@
 date: 2014-07-25 06:10:53+08:00
 layout: post
 title: 获取窗口与控件信息
-thread: 8
 categories: 工具
 tags: 窗口 控件 消息
 ---

@@ -2,7 +2,6 @@
 date: 2014-07-26 06:10:53+08:00
 layout: post
 title: AHK快餐店系列索引
-thread: 9
 categories: 指南
 tags: 零基础教程
 ---

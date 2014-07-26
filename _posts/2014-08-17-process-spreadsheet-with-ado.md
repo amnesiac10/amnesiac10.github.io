@@ -2,7 +2,6 @@
 date: 2014-08-17 14:16:23+08:00
 layout: post
 title: 使用 ADO 操作 Excel 文档
-thread: 21
 categories: 进阶
 tags: ADO Excel COM
 ---

@@ -2,7 +2,6 @@
 date: 2014-08-07 14:16:23+08:00
 layout: post
 title: 正则的调出功能简谈
-thread: 21
 categories: 进阶
 tags: 正则表达式 regex callout
 ---

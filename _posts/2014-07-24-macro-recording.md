@@ -2,7 +2,6 @@
 date: 2014-07-24 06:10:53+08:00
 layout: post
 title: 宏录制和自动化脚本创建
-thread: 7
 categories: 工具
 tags: 宏录制 MacroCreator RSI 肢体重复性劳损
 ---

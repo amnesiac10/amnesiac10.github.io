@@ -2,7 +2,6 @@
 date: 2014-08-03 06:10:54+08:00
 layout: post
 title: 选择哪个分支？
-thread: 17
 categories: 指南
 tags: build 版本 历史
 ---

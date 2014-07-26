@@ -2,7 +2,6 @@
 date: 2014-08-08 14:16:23+08:00
 layout: post
 title: 如何构建知识体系
-thread: 21
 categories: 指南
 tags: 
 ---

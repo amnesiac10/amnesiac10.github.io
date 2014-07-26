@@ -2,7 +2,6 @@
 date: 2014-07-29 06:10:54+08:00
 layout: post
 title: 如何写出好代码
-thread: 12
 categories: 指南
 tags: 重用
 ---

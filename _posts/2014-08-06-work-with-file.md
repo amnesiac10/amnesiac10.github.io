@@ -2,7 +2,6 @@
 date: 2014-08-06 06:10:54+08:00
 layout: post
 title: 文件处理之传统与对象
-thread: 20
 categories: 风格
 tags: 文件 对象
 ---

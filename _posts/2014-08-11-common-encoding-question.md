@@ -2,7 +2,6 @@
 date: 2014-08-11 10:26:23+08:00
 layout: post
 title: 常见的编码问题
-thread: 
 categories: 指南
 tags: 编码 FileEncoding A_FileEncoding A_IsUnicode
 ---

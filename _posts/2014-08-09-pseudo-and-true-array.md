@@ -2,7 +2,6 @@
 date: 2014-08-09 14:16:23+08:00
 layout: post
 title: 伪数组与关联数组
-thread: 23
 categories: 风格
 tags: array 数组 伪数组
 ---

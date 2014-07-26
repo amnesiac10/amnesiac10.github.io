@@ -2,7 +2,6 @@
 date: 2014-07-22 06:10:53+08:00
 layout: post
 title: 字符串排序之应用
-thread: 5
 categories: 实例
 tags:
 ---

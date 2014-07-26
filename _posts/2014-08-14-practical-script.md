@@ -2,7 +2,6 @@
 date: 2014-08-14 06:10:53+08:00
 layout: post
 title: 实用 AutoHotkey 脚本推荐
-thread: 7
 categories: 即用
 tags: 
 ---

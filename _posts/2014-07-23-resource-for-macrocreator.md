@@ -2,7 +2,6 @@
 date: 2014-07-23 06:10:53+08:00
 layout: post
 title: MacroCreator学习资源
-thread: 6
 categories: 工具
 tags: 宏录制 MacroCreator
 ---

@@ -2,7 +2,6 @@
 date: 2014-07-31 06:10:54+08:00
 layout: post
 title: 自动化操作轻松入门
-thread: 14
 categories: 指南
 tags: 脚本
 ---

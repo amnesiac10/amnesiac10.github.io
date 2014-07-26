@@ -2,7 +2,6 @@
 date: 2014-08-16 06:10:54+08:00
 layout: post
 title: 传统形式与表达式
-thread: 17
 categories: 风格
 tags: If 赋值
 ---

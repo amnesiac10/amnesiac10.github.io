@@ -2,7 +2,6 @@
 date: 2014-07-27 06:10:53+08:00
 layout: post
 title: AutoHotkey是什么？
-thread: 10
 categories: 指南
 tags: 脚本 自动化 效率
 ---

@@ -2,7 +2,6 @@
 date: 2014-07-18 06:10:53+08:00
 layout: post
 title: amnesiac的中文论坛情结
-thread: 1
 categories: 其他
 tags: 中文论坛 ahkcn 历史
 ---

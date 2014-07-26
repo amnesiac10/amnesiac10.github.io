@@ -2,7 +2,6 @@
 date: 2014-08-02 06:10:54+08:00
 layout: post
 title: 轻松学会弹指神功
-thread: 16
 categories: 指南
 tags:
 ---

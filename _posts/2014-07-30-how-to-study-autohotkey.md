@@ -2,7 +2,6 @@
 date: 2014-07-30 06:10:54+08:00
 layout: post
 title: 如何学习AutoHotkey？
-thread: 13
 categories: 指南
 tags: 
 ---

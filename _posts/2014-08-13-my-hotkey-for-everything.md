@@ -2,7 +2,6 @@
 date: 2014-08-13 06:10:53+08:00
 layout: post
 title: amnesiac 的 Everything 热键
-thread: 
 categories: 即用
 tags: 热键 Everything TotalCommander
 ---

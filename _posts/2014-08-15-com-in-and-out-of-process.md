@@ -2,7 +2,6 @@
 date: 2014-08-15 06:10:53+08:00
 layout: post
 title: COM 对象的进程内、外运行
-thread: 8
 categories: 甜点
 tags: COM IE
 ---

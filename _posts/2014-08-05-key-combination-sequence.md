@@ -2,7 +2,6 @@
 date: 2014-08-05 06:10:54+08:00
 layout: post
 title: 组合键与序列键
-thread: 19
 categories: 热键
 tags: hotkey hotstring
 ---

@@ -2,7 +2,6 @@
 date: 2014-08-04 06:10:54+08:00
 layout: post
 title: 热键的次数与时长
-thread: 18
 categories: 热键
 tags: 组合键 hotkey
 ---

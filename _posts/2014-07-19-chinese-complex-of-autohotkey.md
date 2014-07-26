@@ -2,7 +2,6 @@
 date: 2014-07-19 06:10:53+08:00
 layout: post
 title: AutoHotkey之中国情
-thread: 2
 categories: 其他
 tags: ahkcn 历史
 ---

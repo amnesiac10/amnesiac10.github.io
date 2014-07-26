@@ -2,7 +2,6 @@
 date: 2014-07-21 06:10:53+08:00
 layout: post
 title: 视频网站瞬间提速（适用于优酷、爱奇艺、搜狐、乐视、土豆等）
-thread: 4
 categories: 即用
 tags: 在线视频 Flash 待更新
 ---

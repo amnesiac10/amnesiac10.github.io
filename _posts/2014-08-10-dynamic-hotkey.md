@@ -2,7 +2,6 @@
 date: 2014-08-10 10:16:23+08:00
 layout: post
 title: 让热键动起来
-thread: 
 categories: 热键
 tags: hotkey input A_PriorKey 待整理
 ---
