@@ -141,7 +141,7 @@ Label:
 #v::MsgBox You pressed Win+V
 ::btw::by the way
 ```
-但目前只能使用 autohotkey 关键字（注意是全部小写），不能使用 ahk 或其他大小写形式（调整了高亮 js 中的代码，没成功）。
+但目前只能使用 autohotkey 关键字（注意是全部小写），不能使用 ahk 或其他大小写形式（调整了高亮 js 中的代码，没成功）。此外，需注意若遇到不支持代码的关键字（在高亮 js 中不存在），则会收到编译失败的错误。
 
 ## 在 github 中使用 markdown 格式的注意事项
 
