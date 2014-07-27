@@ -156,7 +156,7 @@ MsgBox 记事本窗口已被打开！
 
 AU3：
 
-```au3
+```
 Run("Notepad")
 WinWait("无标题 - 记事本")
 MsgBox(0, "", "记事本窗口已被打开！")
@@ -178,7 +178,7 @@ AU3：`WinClose/WinKill ( "窗口标题" [, "窗口文本"] )`
 【示例 3.1.2 】  
 AHK：
 
-{% highlight ahk %}
+```autohotkey
 Run, Sysdm.cpl
 WinWait, 系统属性
 WinActivate, 系统属性
@@ -186,11 +186,11 @@ WinWaitActive, 系统属性
 Sleep, 3000
 WinClose, 系统属性
 WinWaitClose, 系统属性
-{% endhighlight %}
+```
 
 AU3：
 
-```au3
+```
 Run("Control Sysdm.cpl")
 WinWait("系统属性")
 WinActivate("系统属性")
@@ -224,7 +224,7 @@ WinGet, ThisID, ID, ahk_pid %ThisPID% ;ThisID将保存获得的窗口句柄
 
 AU3：
 
-```au3
+```
 Opt("WinTitleMatchMode", 4)
 Run("Notepad")
 $handle = WinGetHandle("classname=Notepad")
@@ -278,7 +278,7 @@ ControlClick, Button2, 系统属性
 
 AU3：
 
-```au3
+```
 ControlClick("系统属性", "", 1)
 ControlClick("系统属性", "", "Button2")
 ControlClick("系统属性", "", "确定")
@@ -300,7 +300,7 @@ Send, {Enter}
 
 AU3：
 
-```au3
+```
 Run("Control Sysdm.cpl")
 WinWait("系统属性")
 Send("{Enter}")
@@ -319,7 +319,7 @@ Send, !f
 
 AU3：
 
-```au3
+```
 Run("Notepad")
 WinWait("无标题 - 记事本")
 WinActivate("无标题 - 记事本")
@@ -364,7 +364,7 @@ Control, Check, , Button14, foobar
 
 AU3：
 
-```au3
+```
 ControlCommand("foobar", "", "Button5", "Check", "")
 ControlCommand("foobar", "", "Button7", "UnCheck", "")
 ControlCommand("foobar", "", "Button14", "Check", "")
@@ -387,7 +387,7 @@ Control, ChooseString, 简体中文, ComboBox1, Installer
 
 AU3：
 
-```au3
+```
 ControlCommand("Installer", "", "ComboBox1", "SetCurrentSelection", 4)
 ControlCommand("Installer", "", "ComboBox1", "SelectString", "简体中文")
 ```
