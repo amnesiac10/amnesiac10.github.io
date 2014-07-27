@@ -16,7 +16,7 @@ tags: 正则表达式 regex callout
 ## 调出功能的意义
 调出功能相当于在这个黑箱子上打孔，这样我们可以看到里面是怎样进行匹配的。
 
-```ahk
+```autohotkey
 Source := "Haystack`nxyz`nabc"
 FoundPos := RegexMatch(Source, "m)xyz$")
 MsgBox, % FoundPos
@@ -24,7 +24,7 @@ MsgBox, % FoundPos
 
 这里显示为 0，告诉我们它没有找到匹配。从逻辑分析：源字符串中 `xyz` 在换行符之前，在匹配模式中使用了多行匹配选项（即 `m`），这样 `$` 应该可以匹配换行符之前的位置，为什么没有匹配呢？现在开始一步步排除问题，首先直接使用 `xyz` 直接匹配源文本肯定没问题，那么问题会在哪里？
 
-``` ahk
+```autohotkey 
 Source := "Haystack`nxyz`nabc"
 FoundPos := RegexMatch(Source, "m)xyz(?CCallout)$")
 MsgBox, % FoundPos
@@ -38,7 +38,7 @@ Callout(m) {
 
 顺便和大家分享个小技巧：在使用 `m` 选项时尽量搭配 \`a 选项，保证你会省却很多麻烦。这里的换行符我们可以直接看到，较容易发现，实际的情况就复杂了，如：
 
-``` AutoHotkey
+```autohotkey
 Source =
 (
 Haystack
@@ -79,7 +79,7 @@ Callout(m) {
 
 现在到 RegexReplace 函数：
 
-```AutoHotkey
+```autohotkey
 Haystack = Whoa, the quick brown fox jumps over the lazy dog.
 NewText := RegExReplace(Haystack, "(the) (\w+)\b(?CCallout)", "the wild")
 
@@ -97,7 +97,7 @@ Callout(m) {
 
 这个例子改自 ahk8.com 一个问题的答案：
 
-```ahk
+```autohotkey
 Text =
 (
 1 Lesser Heal
