@@ -300,7 +300,7 @@ Set MySink = WScript.CreateObject( _
 MySink := ComObjCreate("WbemScripting.SWbemSink")
 ```
 
-ComObjConnect(MySink, "SINK_") 还有原来 VBScript 脚本中的无限空循环被替换为 #Persistent 指令，这样可以在脚本中执行其他操作。从这里可以看出，在具体情况中需要进行灵活的替换，不应该拘泥于某种固定的模式。
+`ComObjConnect(MySink, "SINK_")` 还有原来 VBScript 脚本中的无限空循环被替换为 #Persistent 指令，这样可以在脚本中执行其他操作。从这里可以看出，在具体情况中需要进行灵活的替换，不应该拘泥于某种固定的模式。
 
 对于 WMI 事件，建议采用后面这种异步方式，这样一个脚本中可以同时监听多个事件，还可以在监听事件的同时执行其他操作（虽然使用多个脚本或多线程也可以实现，然而会复杂多了）。
 
