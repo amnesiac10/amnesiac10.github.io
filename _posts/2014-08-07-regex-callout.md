@@ -16,7 +16,7 @@ tags: 正则表达式 regex callout
 ## 调出功能的意义
 调出功能相当于在这个黑箱子上打孔，这样我们可以看到里面是怎样进行匹配的。
 
-```autohotkey
+```  autohotkey
 Source := "Haystack`nxyz`nabc"
 FoundPos := RegexMatch(Source, "m)xyz$")
 MsgBox, % FoundPos
