@@ -79,7 +79,7 @@ Callout(m) {
 
 现在到 RegexReplace 函数：
 
-{% highlight ahk %}
+```AutoHotkey
 Haystack = Whoa, the quick brown fox jumps over the lazy dog.
 NewText := RegExReplace(Haystack, "(the) (\w+)\b(?CCallout)", "the wild")
 
@@ -87,7 +87,7 @@ Callout(m) {
     MsgBox m=%m%`nm1=%m1%`nm2=%m2%
     return 0
 }
-{% endhighlight %}
+```
 
 现在 Callout() 返回 0，那么替换了几次？嗯，两次，即在第一次替换后继续往后搜索，直至替换所有匹配。把返回的值改为 1 看看，出现什么情况了？提示找到了两次，但都没有替换，这里表示调出函数的返回值可以控制 RegexReplace 是否进行替换。
 
@@ -97,7 +97,7 @@ Callout(m) {
 
 这个例子改自 ahk8.com 一个问题的答案：
 
-{% highlight ahk %}
+```ahk
 Text =
 (
 1 Lesser Heal
@@ -116,7 +116,7 @@ Callout(o){
   r := o[1] . CardList[o[2]] "`n"
   return 0
 }
-{% endhighlight %}
+```
 这个脚本的目的是希望把源文本中特定字符串根据对应关系替换为相应的字符串，可以在循环中通过普通字符串函数实现，不过这里是想在正则调出中进行替换：在调出函数中为 Replacement 参数赋值并用于 RegexReplace 函数中的替换。这个操作乍一看似乎行，实际不起作用，因为执行 RegexReplace 函数时 r 是空的即此时已经被替换为空字符串，之后 r 值的变化不会产生影响。
 要获取替换后的字符串却是可行的，只需把 Callout() 函数中赋值 r 的语句替换，这时替换后的字符串会保存在变量 r 中了（不是 NewText）：
 
