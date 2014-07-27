@@ -17,7 +17,7 @@ AutoHotkey 特点介绍、编写经验及使用心得等。如果喜欢，请分
 * 把引用的谷歌网络字体库替换为国内的缓存，如将 Google 免费字体库的域名 http://fonts.googleapis.com 修改为：http://fonts.useso.com 即可
 
 * [文章内链](http://jekyllcn.com/docs/templates/)（`2010-07-21-name-of-post` 不用包括扩展名），构建失败，加上 _posts/ 路径依然，为什么？目前仍使用 site.url 引用
-	* THML：`{% post_url 2010-07-21-name-of-post %}`
+	* HTML：`{% post_url 2010-07-21-name-of-post %}`（但在实际使用时失败，原因未知）
 	* MD：`[Name of link]({% post_url 2010-07-21-name-of-post %})`
 * 图片：`![备用图片提示文本]({{ site.url }}/assets/images/20140720000.png)`
 * 其他文件：`[备用资源提示文本]({{ site.url }}/assets/downloads/12345.pdf)`
@@ -141,7 +141,7 @@ Label:
 #v::MsgBox You pressed Win+V
 ::btw::by the way
 ```
-但目前只能使用 autohotkey 关键字（注意是全部小写），不能使用 ahk 或其他大小写形式（调整了高亮 js 中的代码，没成功）。此外，需注意若遇到不支持代码的关键字（在高亮 js 中不存在），则会收到编译失败的错误。
+但目前只能使用 autohotkey 关键字（注意是全部小写），不能使用 ahk 或其他大小写形式（调整了高亮 js 中的代码，没成功）。此外，需注意若遇到不支持代码的关键字（在高亮 js 中不存在），则会收到编译失败的邮件。
 
 ## 在 github 中使用 markdown 格式的注意事项
 
