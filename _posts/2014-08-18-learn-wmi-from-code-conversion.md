@@ -16,7 +16,7 @@ tags: WMI COM
 ### 分析脚本
 下面这个 VBScript 脚本显示操作系统的名称：
 
-```vbscript
+```vbs
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 Set colItems = objWMIService.ExecQuery( _
@@ -142,7 +142,7 @@ WMI 中时间格式类似于 20101220164120.000000+480，看起来不太方便�
 ## 执行方法
 下面这个 VBScript 脚本把计算机名称从 MS-201012201636 修改为 NewComputerName：
 
-```vbscript
+```vbs
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 ' Obtain an instance of the the class 
@@ -202,7 +202,7 @@ return
 ### 同步监听
 下面这个 VBScript 脚本监听进程创建、关闭事件：
 
-```vbscript
+```vbs
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 Set objEvents = objWMIService.ExecNotificationQuery _
@@ -239,7 +239,7 @@ return
 ### 异步监听
 下面这个 VBScript 脚本与前一个的用途相同，也是监听进程的创建和关闭事件，不过这里使用异步方法：
 
-```vbscript
+```vbs
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 Set MySink = WScript.CreateObject( _
@@ -289,7 +289,7 @@ SINK_OnCompleted(objObject, objAsyncContext) {
 
 其中需要重点注意的是把
 
-```vbscript
+```vbs
 Set MySink = WScript.CreateObject( _
     "WbemScripting.SWbemSink","SINK_")
 ```
@@ -300,7 +300,7 @@ Set MySink = WScript.CreateObject( _
 MySink := ComObjCreate("WbemScripting.SWbemSink")
 ```
 
-`ComObjConnect(MySink, "SINK_")` 还有原来 VBScript 脚本中的无限空循环被替换为 #Persistent 指令，这样可以在脚本中执行其他操作。从这里可以看出，在具体情况中需要进行灵活的替换，不应该拘泥于某种固定的模式。
+ComObjConnect\(MySink, "SINK\_"\) 还有原来 VBScript 脚本中的无限空循环被替换为 #Persistent 指令，这样可以在脚本中执行其他操作。从这里可以看出，在具体情况中需要进行灵活的替换，不应该拘泥于某种固定的模式。
 
 对于 WMI 事件，建议采用后面这种异步方式，这样一个脚本中可以同时监听多个事件，还可以在监听事件的同时执行其他操作（虽然使用多个脚本或多线程也可以实现，然而会复杂多了）。
 
