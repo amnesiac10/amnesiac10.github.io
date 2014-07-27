@@ -32,3 +32,108 @@ AutoHotkey 特点介绍、编写经验及使用心得等。<br /><br />如果喜
 * 每次编辑时，语法高亮最后设置，对于简单的编辑直接在网页中进行而不本地编辑
 * 每次本地修改前首先 git pull 从服务器版本库获取更新，本地修改后上传（以防在线修改的丢失）
 
+关于代码高亮：
+**注意：必须符合当前配置文件中的相关设置，具有相应的 js 和 css 文件并在相应文件中包含。**
+若使用 rdiscount 引擎，虽可识别 `\`\`\`` 格式的代码，但仅高亮 `highlight ahk` 格式代码：
+{% highlight ahk %}
+; Normal comment
+/*
+Block comment
+*/
+
+; Directives, keywords
+#SingleInstance Force
+#NoTrayIcon
+
+; Command, literal text, escape sequence
+MsgBox, Hello World `; This isn't a comment
+
+; Operators
+Bar = Foo  ; operators
+Foo := Bar ; expression assignment operators
+
+; String
+Var := "This is a test"
+
+; Number
+Num = 40 + 4
+
+; Dereferencing
+Foo := %Bar%
+
+; Flow of control, built-in-variables, BIV dereferencing
+if true
+	MsgBox, This will always be displayed
+Loop, 3
+	MsgBox Repetition #%A_Index%
+
+; Built-in function call
+MsgBox % SubStr("blaHello Worldbla", 4, 11)
+
+if false
+{
+	; Keys and buttons
+	Send, {F1}
+	; Syntax errors
+	MyVar = "This is a test
+}
+
+ExitApp
+
+; Label, hotkey, hotstring
+Label:
+#v::MsgBox You pressed Win+V
+::btw::by the way
+{% endhighlight %}
+若使用 redcarpet 引擎，可高亮两种形式的代码（高亮的效果相同），包括 fenced_code_blocks：
+```autohotkey
+; Normal comment
+/*
+Block comment
+*/
+
+; Directives, keywords
+#SingleInstance Force
+#NoTrayIcon
+
+; Command, literal text, escape sequence
+MsgBox, Hello World `; This isn't a comment
+
+; Operators
+Bar = Foo  ; operators
+Foo := Bar ; expression assignment operators
+
+; String
+Var := "This is a test"
+
+; Number
+Num = 40 + 4
+
+; Dereferencing
+Foo := %Bar%
+
+; Flow of control, built-in-variables, BIV dereferencing
+if true
+	MsgBox, This will always be displayed
+Loop, 3
+	MsgBox Repetition #%A_Index%
+
+; Built-in function call
+MsgBox % SubStr("blaHello Worldbla", 4, 11)
+
+if false
+{
+	; Keys and buttons
+	Send, {F1}
+	; Syntax errors
+	MyVar = "This is a test
+}
+
+ExitApp
+
+; Label, hotkey, hotstring
+Label:
+#v::MsgBox You pressed Win+V
+::btw::by the way
+```
+但目前只能使用 autohotkey 关键字（注意是全部小写），不能使用 ahk 或其他大小写形式（调整了高亮 js 中的代码，没成功）。
