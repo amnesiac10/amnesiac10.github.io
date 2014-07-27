@@ -34,7 +34,9 @@ AutoHotkey 特点介绍、编写经验及使用心得等。<br /><br />如果喜
 
 关于代码高亮：
 **注意：必须符合当前配置文件中的相关设置，具有相应的 js 和 css 文件并在相应文件中包含。**
-若使用 rdiscount 引擎，虽可识别 `\`\`\`` 格式的代码，但仅高亮 `highlight ahk` 格式代码：
+相关说明：[Jekyll高亮的另一个选择:JS高亮](http://blog.mangege.com/2012/10/18/jekyllgao-liang-de-ling-yi-ge-xuan-ze-jsgao-liang.html)
+若使用 rdiscount 引擎，虽可识别 <code>```</code> 格式的代码，但仅高亮 `highlight ahk` 格式代码：
+
 {% highlight ahk %}
 ; Normal comment
 /*
@@ -85,7 +87,8 @@ Label:
 #v::MsgBox You pressed Win+V
 ::btw::by the way
 {% endhighlight %}
-若使用 redcarpet 引擎，可高亮两种形式的代码（高亮的效果相同），包括 fenced_code_blocks：
+
+若使用 redcarpet 引擎，可高亮两种形式的代码（高亮的效果相同），包括 fenced_code_blocks：  
 ```autohotkey
 ; Normal comment
 /*
