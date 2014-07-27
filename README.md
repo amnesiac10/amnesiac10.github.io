@@ -1,6 +1,6 @@
-AutoHotkey 特点介绍、编写经验及使用心得等。<br /><br />如果喜欢，请分享到微博、微信等。
+AutoHotkey 特点介绍、编写经验及使用心得等。如果喜欢，请分享到微博、微信等。
 
-博客相关说明：
+## 博客相关说明
 
 本项目派生自 [Yonsm.NET](https://github.com/Yonsm/NET)，在此基础上做了下列调整：<br />
 最重要的一点是，派生本项目并拉到本地后无需安装 Jekyll 等诸多工具（在 Windows 中安装对普通用户较困难，此时无法本地预览），直接新建 md 文件编辑后上传即可（熟悉 md 语法后预览功能纯属多余）。
@@ -23,7 +23,9 @@ AutoHotkey 特点介绍、编写经验及使用心得等。<br /><br />如果喜
 * 其他文件：`[备用资源提示文本]({{ site.url }}/assets/downloads/12345.pdf)`
 
 <br />
-一些注意事项：
+
+## 一些注意事项
+
 * 图片和下载的文件分别放在 `assets` 目录的 `images` 和 `downloads` 中
 * 引用文件时使用站点根目录的绝对路径，如 `![有帮助的截图]({{ site.url }}/assets/screenshot.jpg)`
 * 调整每篇文章下方的”上一篇“和”下一篇“到右边对齐
@@ -32,10 +34,10 @@ AutoHotkey 特点介绍、编写经验及使用心得等。<br /><br />如果喜
 * 每次编辑时，语法高亮最后设置，对于简单的编辑直接在网页中进行而不本地编辑
 * 每次本地修改前首先 git pull 从服务器版本库获取更新，本地修改后上传（以防在线修改的丢失）
 
-关于代码高亮：
-**注意：必须符合当前配置文件中的相关设置，具有相应的 js 和 css 文件并在相应文件中包含。**
-相关说明：[Jekyll高亮的另一个选择:JS高亮](http://blog.mangege.com/2012/10/18/jekyllgao-liang-de-ling-yi-ge-xuan-ze-jsgao-liang.html)
-若使用 rdiscount 引擎，虽可识别 <code>```</code> 格式的代码，但仅高亮 `highlight ahk` 格式代码：
+## 关于代码高亮
+**注意：必须符合当前配置文件中的相关设置，具有相应的 js 和 css 文件并在相应文件中包含。**  
+相关说明：[Jekyll高亮的另一个选择:JS高亮](http://blog.mangege.com/2012/10/18/jekyllgao-liang-de-ling-yi-ge-xuan-ze-jsgao-liang.html)  
+若使用 rdiscount 引擎，虽可识别围栏格式的代码，但仅高亮 `highlight ahk` 格式代码（这里的识别和高亮都需在 md 转换为 html 时才能实现，所以下面的代码既无法被识别也无法高亮）：
 
 {% highlight ahk %}
 ; Normal comment
@@ -88,7 +90,7 @@ Label:
 ::btw::by the way
 {% endhighlight %}
 
-若使用 redcarpet 引擎，可高亮两种形式的代码（高亮的效果相同），包括 fenced_code_blocks：  
+若使用 redcarpet 引擎，可高亮两种形式的代码（高亮的效果相同），包括 fenced_code_blocks（这里的识别由 redcarpet 实现，所以下面的代码可识别，但高亮必须转换到 html 才能看到效果）：  
 ```autohotkey
 ; Normal comment
 /*
@@ -140,3 +142,10 @@ Label:
 ::btw::by the way
 ```
 但目前只能使用 autohotkey 关键字（注意是全部小写），不能使用 ahk 或其他大小写形式（调整了高亮 js 中的代码，没成功）。
+
+## 在 github 中使用 markdown 格式的注意事项
+
+* 引用格式需在行末加两个空格才不会合并，但双层或多层引用则不需要  
+* 列表格式前后需各空一行才能识别，内嵌的列表需用 tab 缩进
+* 在高亮代码或 HTML 标记中的 md 标记无效
+
