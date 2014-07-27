@@ -8,7 +8,7 @@ tags: WMI COM
 
 导言：最近有幸邀请到 RobertL（AutoHotkey 中文论坛管理员）一起写本专栏，在论坛上看到他的诸多回答时让我感叹他的思路一针见血，接下来期待他的好文章，这里也必须感谢知乎对本专栏的大力支持，尽管专栏主题很小众。WMI 功能强大，尤其在系统管理方面，即使你不打算使用它，你也几乎一定会遇到使用它的代码。但由于 WMI 体系结构庞大，因此初学者**学习 WMI 的难点在于如何找到适合的命名空间、类和相应的属性、方法或事件来实现我们需要的功能**。不过很容易注意到，使用 WMI 的代码结构异常简单且网上（尤其是 MSDN）有大量现成的实现各种各样功能的 WMI 代码，所以如果能找到使用其他脚本语言的 WMI 代码并将其转换为 AutoHotkey，那么就绕过了这个难点。
 
-目前关于 Windows 系统管理的脚本中，以 VBScript 居多（例如 MSDN 中的 WMI 代码都是使用这种脚本语言），所以本文以 VBScript 代码的 WMI 脚本为例说明转换为 AutoHotkey 代码的过程，如果看到其他语言的代码也可以参照这个过程，例如对于 VB、JScript、AutoIt 等。本文根据 WMI 代码的不同实现方式把它们分成三类：查看 WMI 属性、执行 WMI 方法和接收 WMI 事件。
+目前关于 Windows 系统管理的脚本中，以 VBScript（现在似乎升级成 VB.NET，我不甚了解）居多（例如 MSDN 中的 WMI 代码都是使用这种脚本语言，微软 MVP 们写的这些教程也挺生动有趣、通俗易懂的），所以本文以 VBScript 代码的 WMI 脚本为例说明转换为 AutoHotkey 代码的过程，如果看到其他语言的代码也可以参照这个过程，例如对于 VB、JScript、AutoIt 等。本文根据 WMI 代码的不同实现方式把它们分成三类：查看 WMI 属性、执行 WMI 方法和接收 WMI 事件。
 
 注：本文重点说明转换过程中的一些情况，但不会解释 WMI 代码的含义，如果您尚不了解 WMI 基础知识，请先参阅 WMI 脚本第一阶系列教程。
 
@@ -16,7 +16,7 @@ tags: WMI COM
 ### 分析脚本
 下面这个 VBScript 脚本显示操作系统的名称：
 
-```vbs
+```   
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 Set colItems = objWMIService.ExecQuery( _
@@ -142,7 +142,7 @@ WMI 中时间格式类似于 20101220164120.000000+480，看起来不太方便�
 ## 执行方法
 下面这个 VBScript 脚本把计算机名称从 MS-201012201636 修改为 NewComputerName：
 
-```vbs
+```   
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 ' Obtain an instance of the the class 
@@ -202,7 +202,7 @@ return
 ### 同步监听
 下面这个 VBScript 脚本监听进程创建、关闭事件：
 
-```vbs
+```   
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 Set objEvents = objWMIService.ExecNotificationQuery _
@@ -239,7 +239,7 @@ return
 ### 异步监听
 下面这个 VBScript 脚本与前一个的用途相同，也是监听进程的创建和关闭事件，不过这里使用异步方法：
 
-```vbs
+```   
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 Set MySink = WScript.CreateObject( _
@@ -289,7 +289,7 @@ SINK_OnCompleted(objObject, objAsyncContext) {
 
 其中需要重点注意的是把
 
-```vbs
+```   
 Set MySink = WScript.CreateObject( _
     "WbemScripting.SWbemSink","SINK_")
 ```
