@@ -65,7 +65,7 @@ abc
 
 先看看 RegexMatch 函数：
 
-{% highlight ahk %}
+```autohotkey
 Haystack = Whoa, the quick brown fox jumps over the lazy dog.
 FoundPos := RegExMatch(Haystack, "(the) (\w+)\b(?CCallout)")
 
@@ -73,7 +73,7 @@ Callout(m) {
     MsgBox m=%m%`nm1=%m1%`nm2=%m2%
     return 0
 }
-{% endhighlight %}
+```
 
 此时，在匹配到 `the quick` 后就退出了，显然没有继续匹配，把 Callout() 中返回给调用者的值改为 1 再执行看看。这次看到了什么，还显示了 `the lazy` 对吗？所以，对于 RegexMatch() 若调出函数返回 0 则匹配成功并返回（且把当前匹配位置保存到 FoundPos 中），若返回 1 则继续往后寻找匹配。换句话说，通过让调出函数返回 1 我们可以执行一次 RegexMatch 即可获取源字符串中符合指定模式的所有匹配（不用再像以前只能通过循环了）。
 
