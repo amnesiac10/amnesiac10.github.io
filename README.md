@@ -90,7 +90,7 @@ Label:
 ::btw::by the way
 {% endhighlight %}
 
-若使用 redcarpet 引擎，可高亮两种形式的代码（高亮的效果相同），包括 fenced_code_blocks（这里的识别由 redcarpet 实现，所以下面的代码可识别，但高亮必须转换到 html 才能看到效果）：  
+若使用 redcarpet 引擎，可高亮两种形式的代码（高亮的效果相同），包括 fenced_code_blocks：  
 ```autohotkey
 ; Normal comment
 /*
