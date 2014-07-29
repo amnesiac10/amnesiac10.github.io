@@ -5,10 +5,10 @@ pygments: true
 # markdown: rdiscount
 markdown: redcarpet
 redcarpet:
-        extensions: ["fenced_code_blocks", "tables"]
+  extensions: ["fenced_code_blocks", "tables"]
+  render_options:
 # Redcarpet: https://github.com/vmg/redcarpet
 # PHP Markdown Extra: https://michelf.ca/projects/php-markdown/extra/#table
-  render_options:
 # redcarpet:
         #  extensions: []
           #    - hard_wrap
