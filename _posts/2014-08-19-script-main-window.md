@@ -3,7 +3,7 @@ date: 2014-08-18 14:06:23+08:00
 layout: post
 title: 游戏中脚本外挂的检测及预防
 categories: 甜点
-tags: A_ScriptHwnd HWND PostMessage
+tags: A_ScriptHwnd HWND 消息
 ---
 
 导言：一些游戏在运行时能检测并屏蔽脚本外挂，原理是什么？有什么办法可以知道当前系统中开了多少脚本？包括使用默认托盘图标、自定义图标甚至隐藏了托盘图标的脚本。还有，能发现已编译成可执行文件的脚本吗？是否能控制这些脚本？？
@@ -36,6 +36,7 @@ DetectHiddenWindows, on
 SendMessage, 0x44, 0x405, 0, , %AHKScriptName% ahk_class AutoHotkey
 MsgBox %ErrorLevel% is the process id.
 ```
+
 想判断哪些是未编译脚本, 哪些是已编译脚本, 请看下图：
 ![运行的 AutoHotkey 脚本列表]({{ site.url }}/assets/images/20140819000.png)
 图中显示当前系统运行了两个 AutoHotkey 脚本，我们对比这两个脚本的窗口名称：
@@ -48,6 +49,7 @@ MsgBox %ErrorLevel% is the process id.
 
 ## 对这些脚本进行控制
 在写脚本时，我们都知道可以很方便的对当前脚本进行控制，如：
+
 ```autohotkey
 Pause::Pause
 ^!s::Suspend
@@ -57,8 +59,10 @@ Pause::Pause
 !v::ListVars
 !k::KeyHistory
 ```
+
 提示：我以前写脚本时习惯加上许多这样的热键，包括暂停、重启、列出热键、列出执行行、列出变量、显示按键历史等，调试时很方便。
 那么，对其他脚本我们可以实现这些功能吗？
+
 ```autohotkey
 AHKScriptName := "MyScript.ahk"
 DetectHiddenWindows On  ; 才可以检测到脚本的隐藏主窗口.
@@ -119,7 +123,7 @@ PostMessage, 0x111, 65306,,, %AHKScriptName% ahk_class AutoHotkey
 
 说到这里，我想起了一个有趣的事情：为什么 AutoHotkey 被称为模拟多线程呢？从这里可以判断出，每个脚本运行时至少有两个线程：
 
-* 主线程，运行主窗口，负责接受消息、缓冲热键及伪线程的调度（如中断和切换）等  
+* 主线程，运行主窗口，负责接受消息、缓冲热键及伪线程的中断和切换等  
 这里的描述可能不太准确和全面，不过大体上可以这么理解，其中的伪线程是指帮助中所说的[线程概念](http://ahkcn.sourceforge.net/docs/misc/Threads.htm)（例如 [Thread](http://ahkcn.sourceforge.net/docs/commands/Thread.htm) 中所描述的线程，注意帮助中除了 A_ScriptHwnd 外从未涉及到主线程）。
 * 脚本线程，实际执行脚本的线程，这不用多说了，它执行的就是我们写的脚本。
 
@@ -134,9 +138,10 @@ While WinExist("ahk_class AutoHotkey")
 	WinKill
 ```
 
-游戏不大可能用 AutoHotkey 写，这里的演示大家能看懂它的用途吧？不过这种检测方法只是我猜测的，对于如 AutoIt、按键精灵这样的脚本语言应该具有一定的可行性（如果是 C 语言这种估计没那么容易预防了）。杀一儆百，正常的脚本如改键工具也无法例外了，有了解游戏开发的朋友能否爆个真实情况。
+游戏不大可能用 AutoHotkey 写，这里的演示大家能看懂它的用途吧？不过这种检测方法只是我猜测的，对于如 AutoIt、按键精灵这样的脚本语言应该具有一定的可行性（如果是 C 语言这种估计没那么容易预防了）。杀一儆百，正常的脚本如改键工具也无法例外了，有了解游戏开发的朋友能否爆个真实情况。规避的方法也很简单，自己下载源码修改过类名编译吧。
 
 本文与游戏关系不大，最开始的标题为**脚本主窗口的妙用**，不过这个标题是否更好呢？
+
 <!--
 ## 推荐的脚本管理工具
 
