@@ -94,6 +94,7 @@ PostMessage, 0x111, 65306,,, %AHKScriptName% ahk_class AutoHotkey ; 暂停
 > 65300 to 65399: Standard tray menu items.  
 > 65400 to 65534: main menu items  
 
+
 消息号 | 含义
 -|-
 65300 | ID_TRAY_OPEN

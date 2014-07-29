@@ -7,7 +7,7 @@ markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables"]
   render_options:
-# Redcarpet: https://github.com/vmg/redcarpet
+# Redcarpet 支持的扩展选项: https://github.com/vmg/redcarpet
 # PHP Markdown Extra: https://michelf.ca/projects/php-markdown/extra/#table
 # redcarpet:
         #  extensions: []
