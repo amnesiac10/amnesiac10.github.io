@@ -15,7 +15,7 @@ Office 家族系列软件功能强大，更强大的是通过相应的对象模�
 * ADO 对象模型简单易学。
 * ADO 且可用于 CSV、TSV、xls、mdb 等多种文件类型。
 * ADO 中通过 SQL 查询可以方便地进行过滤和聚合等。
-* 使用 ADO 是在进程内执行，速度快（请参阅 [COM 对象的进程内、外运行]({{ site.url }}/2014/08/15/com-in-and-out-of-process.md)）。
+* 使用 ADO 是在进程内执行，速度快（请参阅 [COM 对象的进程内、外运行]({{ site.url }}/2014/08/14/com-in-and-out-of-process.html)）。
 * 无需安装 Excel，这可节省了一笔不小的费用（基于国情，这点放最后）。
 
 ## 测试文件样本
