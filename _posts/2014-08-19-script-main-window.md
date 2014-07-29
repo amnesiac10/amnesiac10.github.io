@@ -1,7 +1,7 @@
 ---
 date: 2014-08-19 14:06:23+08:00
 layout: post
-title: 游戏中脚本外挂的检测及预防
+title: 脚本外挂的检测及预防
 categories: 甜点
 tags: A_ScriptHwnd HWND 消息
 ---
@@ -9,7 +9,7 @@ tags: A_ScriptHwnd HWND 消息
 导言：一些游戏在运行时能检测并屏蔽脚本外挂，原理是什么？有什么办法可以知道当前系统中开了多少脚本？包括使用默认托盘图标、自定义图标甚至隐藏了托盘图标的脚本。还有，能发现已编译成可执行文件的脚本吗？是否能控制这些脚本？？
 
 ## 检测在运行的脚本
-获取系统中当前运行的所有 AutoHotkey 脚本的信息（下面的脚本获取脚本标题和教程路径）：
+获取系统中当前运行的所有 AutoHotkey 脚本的信息（下面的脚本获取脚本标题和进程路径）：
 
 ```autohotkey
 DetectHiddenWindows, on
@@ -95,22 +95,22 @@ PostMessage, 0x111, 65306,,, %AHKScriptName% ahk_class AutoHotkey ; 暂停
 > 65400 to 65534: main menu items  
 
 
-消息号 | 含义
--|-
-65300 | ID_TRAY_OPEN
-65400 | ID_FILE_RELOADSCRIPT, ID_TRAY_RELOADSCRIPT
-65401 | ID_FILE_EDITSCRIPT, ID_TRAY_EDITSCRIPT
-65402 | ID_FILE_WINDOWSPY, ID_TRAY_WINDOWSPY
-65403 | ID_FILE_PAUSE, ID_TRAY_PAUSE
-65404 | ID_FILE_SUSPEND, ID_TRAY_SUSPEND
-65405 | ID_FILE_EXIT, ID_TRAY_EXIT
-65406 | ID_VIEW_LINES
-65407 | ID_VIEW_VARIABLES
-65408 | ID_VIEW_HOTKEYS
-65409 | ID_VIEW_KEYHISTORY
-65410 | ID_VIEW_REFRESH
-65411 | ID_HELP_USERMANUAL, ID_TRAY_HELP
-65412 | ID_HELP_WEBSITE
+| 消息号 | 含义 |
+| - | - |
+| 65300 | ID_TRAY_OPEN |
+| 65400 | ID_FILE_RELOADSCRIPT, ID_TRAY_RELOADSCRIPT |
+| 65401 | ID_FILE_EDITSCRIPT, ID_TRAY_EDITSCRIPT |
+| 65402 | ID_FILE_WINDOWSPY, ID_TRAY_WINDOWSPY |
+| 65403 | ID_FILE_PAUSE, ID_TRAY_PAUSE |
+| 65404 | ID_FILE_SUSPEND, ID_TRAY_SUSPEND |
+| 65405 | ID_FILE_EXIT, ID_TRAY_EXIT |
+| 65406 | ID_VIEW_LINES |
+| 65407 | ID_VIEW_VARIABLES |
+| 65408 | ID_VIEW_HOTKEYS |
+| 65409 | ID_VIEW_KEYHISTORY |
+| 65410 | ID_VIEW_REFRESH |
+| 65411 | ID_HELP_USERMANUAL, ID_TRAY_HELP |
+| 65412 | ID_HELP_WEBSITE |
 
 注：一般而言在更新版本时消息号的用途不太可能发生变化，不过为了安全，在使用前最好明确其用途，否则可能发生意外情况。
 
