@@ -128,7 +128,7 @@ PostMessage, 0x111, 65306,,, %AHKScriptName% ahk_class AutoHotkey ; 暂停
 这里的描述可能不太准确和全面，不过大体上可以这么理解，其中的伪线程是指帮助中所说的[线程概念](http://ahkcn.github.io/docs/misc/Threads.htm)（例如 [Thread](http://ahkcn.github.io/docs/commands/Thread.htm) 中所描述的线程，注意帮助中除了 A_ScriptHwnd 外从未涉及到主线程）。
 * 脚本线程，实际执行脚本的线程，这不用多说了，它执行的就是我们写的脚本。
 
-从 Microsoft Spy++ 中可以看到，实际上每个脚本也只有两个线程（你多开几个热键，多用几个计时器并不会出现更多线程）。对于模拟多线程的理解，请参阅[什么是 Event Loop？](http://www.ruanyifeng.com/blog/2013/10/event_loop.html)，本文以 JavaScript 为例通俗地说明了这种模型的工作机制，尽管某些术语有所不同，不过不影响理解。
+从 Microsoft Spy++ 中可以看到，实际上每个脚本也只有两个线程（你多开几个热键，多用几个计时器并不会出现更多线程）。对于模拟多线程的理解，请参阅[什么是 Event Loop？](http://www.ruanyifeng.com/blog/2013/10/event_loop.html)，此文以 JavaScript 为例通俗地说明了这种模型的工作机制，尽管某些术语有所不同，不过不影响理解。
 
 ## 小结
 尽管未谈到游戏，不过主要内容前面都说完了。因此，要检测 AutoHotkey 脚本的外挂只需在脚本启动及运行时定期执行：

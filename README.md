@@ -37,7 +37,7 @@ AutoHotkey 特点介绍、编写经验及使用心得等。如果喜欢，请分
 ## 关于代码高亮
 **注意：必须符合当前配置文件中的相关设置，具有相应的 js 和 css 文件并在相应文件中包含。**  
 相关说明：[Jekyll高亮的另一个选择:JS高亮](http://blog.mangege.com/2012/10/18/jekyllgao-liang-de-ling-yi-ge-xuan-ze-jsgao-liang.html)  
-若使用 rdiscount 引擎，虽可识别围栏格式的代码，但仅高亮 `highlight ahk` 格式代码（这里的识别和高亮都需在 md 转换为 html 时才能实现，所以下面的代码既无法被识别也无法高亮）：
+若使用 rdiscount 引擎，虽可识别围栏格式的代码，但仅高亮 `highlight ahk` 形式代码（这里的识别和高亮都需在 md 转换为 html 时才能实现，所以下面的代码既无法被识别也无法高亮）：
 
 {% highlight ahk %}
 ; Normal comment
