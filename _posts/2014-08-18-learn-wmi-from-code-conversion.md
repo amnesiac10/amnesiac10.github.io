@@ -16,7 +16,7 @@ tags: WMI COM
 ### 分析脚本
 下面这个 VBScript 脚本显示操作系统的名称：
 
-```   
+```vbnet
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 Set colItems = objWMIService.ExecQuery( _
@@ -142,7 +142,7 @@ WMI 中时间格式类似于 20101220164120.000000+480，看起来不太方便�
 ## 执行方法
 下面这个 VBScript 脚本把计算机名称从 MS-201012201636 修改为 NewComputerName：
 
-```   
+```vbnet
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 ' Obtain an instance of the the class 
@@ -202,7 +202,7 @@ return
 ### 同步监听
 下面这个 VBScript 脚本监听进程创建、关闭事件：
 
-```   
+```vbnet
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 Set objEvents = objWMIService.ExecNotificationQuery _
@@ -239,7 +239,7 @@ return
 ### 异步监听
 下面这个 VBScript 脚本与前一个的用途相同，也是监听进程的创建和关闭事件，不过这里使用异步方法：
 
-```   
+```vbnet
 strComputer = "." 
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 Set MySink = WScript.CreateObject( _
@@ -289,7 +289,7 @@ SINK_OnCompleted(objObject, objAsyncContext) {
 
 其中需要重点注意的是把
 
-```   
+```vbnet
 Set MySink = WScript.CreateObject( _
     "WbemScripting.SWbemSink","SINK_")
 ```

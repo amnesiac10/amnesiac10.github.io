@@ -95,22 +95,22 @@ PostMessage, 0x111, 65306,,, %AHKScriptName% ahk_class AutoHotkey ; 暂停
 > 65400 to 65534: main menu items  
 
 
-| 消息号 | 含义 |
-| - | - |
-| 65300 | ID_TRAY_OPEN |
-| 65400 | ID_FILE_RELOADSCRIPT, ID_TRAY_RELOADSCRIPT |
-| 65401 | ID_FILE_EDITSCRIPT, ID_TRAY_EDITSCRIPT |
-| 65402 | ID_FILE_WINDOWSPY, ID_TRAY_WINDOWSPY |
-| 65403 | ID_FILE_PAUSE, ID_TRAY_PAUSE |
-| 65404 | ID_FILE_SUSPEND, ID_TRAY_SUSPEND |
-| 65405 | ID_FILE_EXIT, ID_TRAY_EXIT |
-| 65406 | ID_VIEW_LINES |
-| 65407 | ID_VIEW_VARIABLES |
-| 65408 | ID_VIEW_HOTKEYS |
-| 65409 | ID_VIEW_KEYHISTORY |
-| 65410 | ID_VIEW_REFRESH |
-| 65411 | ID_HELP_USERMANUAL, ID_TRAY_HELP |
-| 65412 | ID_HELP_WEBSITE |
+消息号| 含义
+----- | -----
+65300 | ID_TRAY_OPEN
+65400 | ID_FILE_RELOADSCRIPT, ID_TRAY_RELOADSCRIPT
+65401 | ID_FILE_EDITSCRIPT, ID_TRAY_EDITSCRIPT
+65402 | ID_FILE_WINDOWSPY, ID_TRAY_WINDOWSPY
+65403 | ID_FILE_PAUSE, ID_TRAY_PAUSE
+65404 | ID_FILE_SUSPEND, ID_TRAY_SUSPEND
+65405 | ID_FILE_EXIT, ID_TRAY_EXIT
+65406 | ID_VIEW_LINES
+65407 | ID_VIEW_VARIABLES
+65408 | ID_VIEW_HOTKEYS
+65409 | ID_VIEW_KEYHISTORY
+65410 | ID_VIEW_REFRESH
+65411 | ID_HELP_USERMANUAL, ID_TRAY_HELP
+65412 | ID_HELP_WEBSITE
 
 注：一般而言在更新版本时消息号的用途不太可能发生变化，不过为了安全，在使用前最好明确其用途，否则可能发生意外情况。
 
@@ -128,7 +128,7 @@ PostMessage, 0x111, 65306,,, %AHKScriptName% ahk_class AutoHotkey ; 暂停
 这里的描述可能不太准确和全面，不过大体上可以这么理解，其中的伪线程是指帮助中所说的[线程概念](http://ahkcn.github.io/docs/misc/Threads.htm)（例如 [Thread](http://ahkcn.github.io/docs/commands/Thread.htm) 中所描述的线程，注意帮助中除了 A_ScriptHwnd 外从未涉及到主线程）。
 * 脚本线程，实际执行脚本的线程，这不用多说了，它执行的就是我们写的脚本。
 
-从 Microsoft Spy++ 中可以看到，实际上每个脚本也只有两个线程（你多开几个热键，多用几个计时器并不会出现更多线程）。
+从 Microsoft Spy++ 中可以看到，实际上每个脚本也只有两个线程（你多开几个热键，多用几个计时器并不会出现更多线程）。对于模拟多线程的理解，请参阅[什么是 Event Loop？](http://www.ruanyifeng.com/blog/2013/10/event_loop.html)，本文以 JavaScript 为例通俗地说明了这种模型的工作机制，尽管某些术语有所不同，不过不影响理解。
 
 ## 小结
 尽管未谈到游戏，不过主要内容前面都说完了。因此，要检测 AutoHotkey 脚本的外挂只需在脚本启动及运行时定期执行：
