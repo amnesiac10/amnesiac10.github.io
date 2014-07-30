@@ -148,4 +148,6 @@ Label:
 * 引用格式需在行末加两个空格才不会合并，但双层或多层引用则不需要  
 * 列表格式前后需各空一行才能识别，内嵌的列表需用 tab 缩进
 * 在高亮代码或 HTML 标记中的 md 标记无效
+* 对于表格的格式，请参阅 [脚本外挂的检测及预防](http://amnesiac10.github.io/2014/08/19/script-main-window.html)和 [Markdown语法说明](http://erikge.com/articles/markdownSyntax/)
+* 代码的语法高亮关键字请参阅 [Pygments Available lexers](http://pygments.org/docs/lexers/)，例如对于 vbscript 代码需要使用 **vbnet** 才会高亮（否则编译失败）（从这里可以看到实际起高亮用途的还是 pygments 而不是 highlight.min.js，但去除后者又似乎不行，不清楚原因）
 
