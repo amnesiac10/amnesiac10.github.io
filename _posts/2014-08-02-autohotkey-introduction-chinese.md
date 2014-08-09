@@ -737,7 +737,6 @@ return
 本文仅是基础的入门介绍，以下列出几个网站供想要更上层楼的读者们参考：
 
 * [官方网站](http://ahkscript.org/)、[论坛](http://ahkscript.org/boards/)及[其中文子论坛](http://ahkscript.org/boards/viewforum.php?f=26)
-* [中文爱好者论坛](http://ahk8.com/)
 * 中文帮助：帮助是很好的参考手册，同时自带了很好的[初学者向导](http://ahkcn.github.io/docs/Tutorial.htm)
 * 本博客中更多的 AutoHotkey 使用经验和技巧：[AutoHotkey 分类][1]、[AutoHotkey 标签][2]
 

@@ -5,7 +5,7 @@
 
 2. 零基础入门
 这里是一些通俗易懂的基础入门教程，经适当整理（以反映目前 AutoHotkey 现状）后集中发表，以方便无任何脚本和编程经验的新手朋友入门。
- * [初学者向导](http://ahkcn.sourceforge.net/docs/Tutorial.htm)：这是帮助自带的很好的入门教程。
+ * [初学者向导](http://ahkcn.github.io/docs/Tutorial.htm)：这是帮助自带的很好的入门教程。
  * [让重复工作一键完成](http://jianshu.io/p/fd5d269f77cf)
  * [自动化操作轻松入门](http://jianshu.io/p/5841065a4d11)
  * [轻松学会弹指神功](http://jianshu.io/p/f80832436433)
@@ -13,14 +13,14 @@
 
 2. 常见问题指南
 这部分包含了在学习和使用 AutoHotkey 常见的困惑。
- * [常见问题](http://ahkcn.sourceforge.net/docs/FAQ.htm)：包括常见的语法、任务、热键、热字串及重映射等问题。
+ * [常见问题](http://ahkcn.github.io/docs/FAQ.htm)：包括常见的语法、任务、热键、热字串及重映射等问题。
  * [选择哪个分支？](http://jianshu.io/p/7a7a82316f0f)
  * [如何学习 AutoHotkey？](http://jianshu.io/p/43d87fc7f110)
 
 2. 热键和热字串
- * [热键（鼠标、操纵杆和键盘快捷键）](http://ahkcn.sourceforge.net/docs/Hotkeys.htm)：
- * [热字串和自动替换](http://ahkcn.sourceforge.net/docs/Hotstrings.htm)：
- * [重映射按键和鼠标按钮](http://ahkcn.sourceforge.net/docs/misc/Remap.htm)：
+ * [热键（鼠标、操纵杆和键盘快捷键）](http://ahkcn.github.io/docs/Hotkeys.htm)：
+ * [热字串和自动替换](http://ahkcn.github.io/docs/Hotstrings.htm)：
+ * [重映射按键和鼠标按钮](http://ahkcn.github.io/docs/misc/Remap.htm)：
  * [组合键与序列键](http://jianshu.io/p/84f00e7890a5)
  * [次数与时长](http://jianshu.io/p/aa1dc3c4673a)
 

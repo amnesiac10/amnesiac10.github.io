@@ -31,7 +31,7 @@ tags:
 
 在**熟悉帮助**基础上，这时普通的问题都不在话下了，如果希望快速深入并形成自己的体系（知道它所短与所长，什么时候该使用，什么时候不应考虑），下面有几个建议：
 
-1. 加入 AHKCN QQ 群（号码：58806956）、[中文爱好者论坛](http://ahk8.com/)，积极提问和回答问题；
+1. 加入 AHKCN QQ 群（号码：58806956），积极提问和回答问题；
 2. [官方论坛](http://ahkscript.org/boards/)（含中文子论坛）、[stackoverflow.com 中的 AutoHotkey 专区](http://stackoverflow.com/questions/tagged/autohotkey)（英文），积极提问和交流；
 3. 学习中文论坛、官方论坛（及中文子论坛）中感兴趣的脚本和函数，构建体系；
 4. 利用[谷歌快讯](http://www.google.com/alerts?hl=zh-CN)订阅“AutoHotkey”、“.ahk”等相关关键字，了解网上最新出现的相关信息，其中包括问题和实用脚本，看看别人怎么使用 AutoHotkey（会有惊喜的）；

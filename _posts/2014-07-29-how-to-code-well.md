@@ -2,7 +2,7 @@
 date: 2014-07-29 06:10:54+08:00
 layout: post
 title: 如何写出好代码
-categories: 指南
+categories: 进阶
 tags: 重用
 ---
 导言：这个题目很大，以我的水平、经验或哪个方面都是写不了的，就像 Eric S. Raymond 如果不是对 UNIX 世界的典故了如指掌的话也写不出现在的《UNIX 编程艺术》。用这个标题是因为 [@vczh](http://www.zhihu.com/people/geniusvczh) 对这话题有兴趣（请看[靠谱的代码和DRY](http://zhuanlan.zhihu.com/vczh-nichijou/19801837)），这里仅是抛个砖，也算是这几年写 AutoHotkey 代码的一点心得。
