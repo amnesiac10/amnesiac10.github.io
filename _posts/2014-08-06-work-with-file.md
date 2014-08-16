@@ -88,7 +88,7 @@ if FileExist(strFileName)
 使用 Loop 循环遍历文件系统中指定位置的文件和文件夹（与上面读取文件内容不同）：
 
 {% highlight ahk %}
-strObjectDir := "C:\"
+strObjectDir := "C:\*"
 Loop, %strObjectDir% ; 仅获取文件。
 {
   MsgBox, 在 %strObjectDir% 中第 %A_Index% 个文件的名称为 %A_LoopFileName%。
